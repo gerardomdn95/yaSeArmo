@@ -1,11 +1,16 @@
 (function(){
     'use strict'
 
-var homeComponent = {
-    
-}
+var yaHome = {
+    templateUrl: './app/components/home.component/home.component.html',
+    controller: homeCtrl
+};
 
     angular
         .module('yaApp')
-        .component('homeComponent', homeComponent);
+        .component('yaHome', yaHome);
+
+    function homeCtrl(){
+        var vm = this;
+    }
 })();
