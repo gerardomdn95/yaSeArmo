@@ -1,0 +1,59 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(90deg, $primary, $secondary);
+
+  @extend %flex--column;
+
+  &__item{
+
+    &:first-child{
+      flex: 1 1 auto
+    }
+
+    &:last-child{
+      flex: 11 0 auto;
+    }
+  }
+}
+
+.hero{
+
+  &__title, &__link{
+    color: #FFF;
+    text-align: center;
+  }
+
+  &__title{
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  &__link{
+    font-size: 1.2em;
+    background-color: #fff;
+    color: $secondary;
+  }
+
+  &__img{
+
+    @media screen and (min-width: 32rem) {
+      height: 25vh;
+      min-height: 25vh;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &:first-child{
+      margin: 4em 0 0 0;
+    }
+
+    &:last-child{
+      @extend %flex--column;
+      align-items: center;
+      padding: 1em 1em;
+      text-transform: capitalize;
+    }
+  }
+}

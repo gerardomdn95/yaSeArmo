@@ -1,0 +1,54 @@
+@import "../modules/all";
+
+//GRID
+
+%flex {
+  display: flex;
+
+  &--column{
+    @extend %flex;
+   flex-direction: column;
+  }
+}
+
+//UTIL
+
+
+.link{
+  text-decoration: none;
+
+  &--rounded{
+    @extend .link;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+  }
+
+  &--hover:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+//TYPED JS
+
+.typed-cursor{
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+

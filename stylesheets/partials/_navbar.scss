@@ -1,0 +1,14 @@
+.nav {
+  background-color: #FFF;
+
+  @extend %flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &__link{
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 1em;
+  }
+}
