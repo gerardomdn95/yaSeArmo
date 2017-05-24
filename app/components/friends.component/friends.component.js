@@ -9,7 +9,13 @@ var yaFriends = {
         .module('yaApp')
         .component('yaFriends', yaFriends);
 
-    function friendsCtrl(){
-        var vm = this;
+    friendsCtrl.$inject = ["usersJson"];
+    console.log("Hola")
+
+    function friendsCtrl(usersJson){
+        var users = this;
+        console.log("Hola")
+        
+        users.apiData = usersJson.query();
     }
 })();

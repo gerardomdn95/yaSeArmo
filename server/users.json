@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Nelly Desu",
+        "img": "/assets/img/person01.png"
+    },
+    {
+        "name": "Gerardo Medina",
+        "img": "/assets/i/realstate.jpg"
+    },
+    {
+        "name": "Mau Saavedra",
+        "img": "/assets/i/realstate.jpg"
+    },
+    {
+        "name": "Diego Alberto",
+        "img": "/assets/i/realstate.jpg"
+    },
+    {
+        "name": "Yahir",
+        "img": "/assets/i/realstate.jpg"
+    },
+    {
+        "name": "Mora JS",
+        "img": "/assets/i/realstate.jpg"
+    },
+    {
+        "name": "Daniel Alessandro",
+        "img": "/assets/i/realstate.jpg"
+    }
+]
