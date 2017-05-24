@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "658236027731",
+    "firebase_url": "https://ya-se-armo.firebaseio.com",
+    "project_id": "ya-se-armo",
+    "storage_bucket": "ya-se-armo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658236027731:android:cc499deed8080741",
+        "android_client_info": {
+          "package_name": "com.masavi.yasearmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658236027731-sukmjkmes21u42jlub5dam5ucfvtflu9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.masavi.yasearmo",
+            "certificate_hash": "5fbb0e9d65740f28f1669060e6ba1724e0ba4f1b"
+          }
+        },
+        {
+          "client_id": "658236027731-02vi3se6se0f8idqkso60as9baguahag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHnQ7zqeLOSp1UPkmcd8PUIoLKpWWtp60"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658236027731-02vi3se6se0f8idqkso60as9baguahag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
