@@ -10,7 +10,6 @@ var yaFriends = {
         .component('yaFriends', yaFriends);
 
     friendsCtrl.$inject = ["usersJson"];
-    console.log("Hola")
 
     function friendsCtrl(usersJson){
         var users = this;

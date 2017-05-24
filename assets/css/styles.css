@@ -34,3 +34,11 @@ nav{
     padding-top: 50%;
     margin: auto;
 }
+
+#recuadro{
+    background-color: rgba(34, 0, 127,0.5);
+    position: relative;
+    width: 90%;
+    padding-bottom: 45%; 
+    margin: auto;
+}
