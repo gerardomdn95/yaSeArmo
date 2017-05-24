@@ -1,0 +1,34 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+nav{
+  background: -webkit-linear-gradient(left, #5d006a, #22007f) !important;
+}
+
+#logonav{
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#mobile-demo{
+  margin-top: 10px;
+}
+
+#listaamigos{
+  margin-right: 70%;
+}
+
+.row{
+  margin-bottom: 0px !important;
+}
+
+#recuadro{
+  height: 600px;
+  width: 60%;
+  margin-right: 4%;
+  margin-top: -30%;
+  margin-left: auto;
+  background-color: rgba(137, 188, 242,0.5);
+}
