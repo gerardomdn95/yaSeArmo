@@ -7,7 +7,6 @@
 
     usersJson.$inject = ["$resource"];
     function usersJson($resource){
-        //console.log($resource);
-        return $resource("./server/users.json")
+        return $resource("../server/users.json")
     }
 })();

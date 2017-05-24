@@ -20,42 +20,17 @@
 <div class="row">
     <section id="listaamigos" class="col l4 m4">
         <h5 class="center">Agrega a tus amigos.</h5>
-        <input type="text">
+        
         <div>
+            <input ng-model="search.name">
+        </div>
+
+
+        <div ng-repeat="user in $ctrl.apiData | filter:search">
             <div class="card-panel grey lighten-5 z-depth-1">
                 <div class="row valign-wrapper">
                     <div class="col s4">
-                        <img src="../assets/img/person01.png" alt="amigo02" class="circle responsive-img">
-                    </div>
-                    <div class="col s10">
-                        <span class="black-text">{{user.name}}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s4">
-                        <img src="../assets/img/person01.png" alt="amigo02" class="circle responsive-img">
-                    </div>
-                    <div class="col s10">
-                        <span class="black-text">{{user.name}}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s4">
-                        <img src="../assets/img/person01.png" alt="amigo02" class="circle responsive-img">
-                    </div>
-                    <div class="col s10">
-                        <span class="black-text">{{user.name}}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s4">
-                        <img src="../assets/img/person01.png" alt="amigo02" class="circle responsive-img">
+                        <img src="{{user.img}}" alt="amigo02" class="circle responsive-img">
                     </div>
                     <div class="col s10">
                         <span class="black-text">{{user.name}}</span>
@@ -63,6 +38,7 @@
                 </div>
             </div>
         </div>
+
     </section>
     <div class="col l8 m8">
         <h3 id="idPeda" class="center">¡Título de la peda!</h3>

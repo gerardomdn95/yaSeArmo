@@ -13,8 +13,8 @@ var yaFriends = {
 
     function friendsCtrl(usersJson){
         var users = this;
-        console.log("Hola")
         
         users.apiData = usersJson.query();
+        console.log(users)
     }
 })();
