@@ -16,19 +16,21 @@ nav{
   margin-top: 10px;
 }
 
-#listaamigos{
-  margin-right: 70%;
-}
-
 .row{
   margin-bottom: 0px !important;
 }
 
-#recuadro{
-  height: 600px;
-  width: 60%;
-  margin-right: 4%;
-  margin-top: -30%;
-  margin-left: auto;
-  background-color: rgba(137, 188, 242,0.5);
+#idPeda{
+  font-family: 'Archivo Black', sans-serif;
+}
+
+
+#circle{
+    background-color: rgba(34, 0, 127,0.5);
+    position: relative;
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    padding-top: 50%;
+    margin: auto;
 }
