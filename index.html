@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+<link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <title>Ya se armó</title>
 </head>
 
@@ -34,19 +36,24 @@
         </ul>
     </div>
 </nav>
+    
+    <div ng-view></div>
+    <h1>{{2+2}} <br> {{Holamorros}}</h1>
 
-    <ya-friends></ya-friends>
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
-    <script src="app/app.module.js"></script>
-    <script src="app/components/home.component/home.component.js"></script>
-    <script src="app/components/event.component/event.component.js"></script>
-    <script src="app/components/friends.component/friends.component.js"></script>
-    <script src="app/components/services.component/services.component.js"></script>
-    <script src="app/factories/users.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+ 
+    <script src="./app/app.module.js"></script>
+   <script src="./app/routes.js"></script>
+    <script src="./app/components/home.component/home.component.js"></script>
+    <script src="./app/components/event.component/event.component.js"></script>
+    <script src="./app/components/friends.component/friends.component.js"></script>
+    <script src="./app/components/services.component/services.component.js"></script>
+    <script src="./app/factories/users.js"></script>
 </body>
 
 </html>
