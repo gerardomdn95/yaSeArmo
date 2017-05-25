@@ -2,7 +2,6 @@
     'use strict'
 
 
-
     var yaFriends = {
         templateUrl:'app/components/friends.component/friends.component.html',
         controller:friendsCtrl,

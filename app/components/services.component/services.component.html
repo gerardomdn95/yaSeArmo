@@ -12,8 +12,24 @@
     </div>
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <h4>Aquí van los servicios disponibles</h4>
-            <p>Lista de Servicios</p>
+            <h4 class="center">Alcohol</h4>
+            <div>
+                <input ng-model="search.name">
+            </div>
+            <div ng-repeat="user in $ctrl.apiData | filter:search">
+
+                <div class="card-panel grey lighten-5 z-depth-1">
+                    <div class="row valign-wrapper">
+                        <div class="col s2">
+                            <img src="images/yuna.jpg" alt="" class="circle responsive-img">
+                            <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s10">
+                            <span class="black-text">{{user.name}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Listo</a>
