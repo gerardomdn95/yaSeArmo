@@ -1,17 +1,22 @@
-(function(){
+(function () {
     'use strict'
 
-var yaServices = {
-    templateUrl: './app/components/services.component/services.component.html',
-    controller: servicesCtrl
-};
+    var yaServices = {
+        templateUrl: './app/components/services.component/services.component.html',
+        controller: servicesCtrl
+    };
 
     angular
         .module('yaApp')
         .component('yaServices', yaServices);
 
-    function servicesCtrl(){
-        var vm = this;
-         $('.modal').modal();
+    servicesCtrl.$inject = ["usersJson"];
+
+    function servicesCtrl(usersJson) {
+        var users = this;
+
+        $('.modal').modal();
+        users.apiData = usersJson.query();
+        console.log(users)
     }
 })();
