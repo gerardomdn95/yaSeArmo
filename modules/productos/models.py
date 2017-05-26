@@ -25,7 +25,7 @@ class Paquetes(models.Model):
 class Pedidos(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
-    direccion = models.GenericIPAddressField()
+    direccion = models.TextField()
     fecha_solicitado = models.DateField(auto_now_add=True)
     hora_entregado = models.DateTimeField(blank=True)
     paquetes = models.ManyToManyField(Paquetes)
