@@ -1,5 +1,8 @@
 @import "../modules/all";
 
+body{
+  line-height: 1;
+}
 //GRID
 
 %flex {
@@ -13,13 +16,12 @@
 
 //UTIL
 
-
 .link{
   text-decoration: none;
 
   &--rounded{
     @extend .link;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     border-radius: 25px;
   }
 
@@ -51,4 +53,3 @@
   50% { opacity:0; }
   100% { opacity:1; }
 }
-

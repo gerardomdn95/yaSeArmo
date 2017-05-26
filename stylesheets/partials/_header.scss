@@ -1,59 +1,61 @@
-.header {
-  height: 100vh;
-  background-image: linear-gradient(90deg, $primary, $secondary);
+.header__logo{
 
-  @extend %flex--column;
-
-  &__item{
-
-    &:first-child{
-      flex: 1 1 auto
-    }
-
-    &:last-child{
-      flex: 11 0 auto;
-    }
-  }
 }
 
-.hero{
+.header__item
 
-  &__title, &__link{
-    color: #FFF;
-    text-align: center;
-  }
+.header {
 
-  &__title{
-    font-size: 3em;
-    margin-bottom: 1em;
-  }
+  height: 100vh;
 
-  &__link{
-    font-size: 1.2em;
-    background-color: #fff;
-    color: $secondary;
-  }
+  background-color: $backgroundColor;
+  background-image: url('../assets/images/backgrounds/confetti.png');
+  background-repeat: repeat-x;
 
-  &__img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    @media screen and (min-width: 32rem) {
-      height: 25vh;
-      min-height: 25vh;
+  &__logo {
+    width: 80%;
+    @media screen and (min-width: 32rem){ 32rem 32 * 16 700px
+      width: 50%;
     }
   }
 
   &__item {
+    margin: 3em;
+  }
+
+  &__description {
     text-align: center;
+    width: 80%;
+    font-size: 1.25em;
+    color: $purpleColor;
 
-    &:first-child{
-      margin: 4em 0 0 0;
+    @media screen and (min-width: 32rem){
+      width: 60%;
     }
+  }
 
-    &:last-child{
-      @extend %flex--column;
-      align-items: center;
-      padding: 1em 1em;
-      text-transform: capitalize;
+  &__link {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1em;
+
+    @media screen and (min-width: 32rem){
+      font-size: 1.2em;
+    }
+  }
+
+  &__button{
+    background-color: $purpleColor;
+    border-radius: 50px;
+    padding: 1.5rem 1.5rem;
+
+    @media screen and (min-width: 32rem){
+      padding: 2rem;
     }
   }
 }
