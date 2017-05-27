@@ -17,8 +17,6 @@
     function servicesCtrl(usersJson) {
         var users = this;
 
-
-
         $('.modal').modal();
         users.apiData = usersJson.query();
         console.log(users)

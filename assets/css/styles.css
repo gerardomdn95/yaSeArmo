@@ -6,6 +6,11 @@ nav{
   background: -webkit-linear-gradient(left, #5d006a, #22007f) !important;
 }
 
+.catego{
+  width: 10%;
+  height: 10%;
+}
+
 #logonav{
   width: 150px;
   margin-top: 10px;
@@ -32,13 +37,13 @@ nav{
     height: auto;
     padding-top: 50%;
     margin: auto;
-    
+
 }
 
 #recuadro{
-    background-color: rgba(34, 0, 127,0.5);
+    /*background-color: rgba(34, 0, 127,0.5);*/
     position: relative;
     width: 90%;
-    padding-bottom: 45%; 
+    padding-bottom: 45%;
     margin: auto;
 }

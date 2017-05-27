@@ -6,7 +6,7 @@
         .module('yaApp')
         .config(config);
 
-    function config($routeProvider) {
+    function config($routeProvider,$locationProvider) {
         $routeProvider
 
             .when('/home',{
@@ -19,7 +19,7 @@
             .when('/yaevent',{
                 template:'<ya-event></ya-event>'
             })
-            
+
             .when('/yafriends',{
                 template:'<ya-friends></ya-friends>'
             })
@@ -37,10 +37,12 @@
             .when('/yamap',{
                 template:'<ya-map></ya-map>'
             })
-        
+
             .otherwise({
                 redirectTo:'/home'
-            })
+            });
+
+            $locationProvider.html5Mode(true);
     }
 
 
