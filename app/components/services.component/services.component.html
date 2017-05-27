@@ -16,20 +16,23 @@
             <div>
                 <input ng-model="search.name">
             </div>
-            <div ng-repeat="user in $ctrl.apiData | filter:search">
-
-                <div class="card-panel grey lighten-5 z-depth-1">
+        <!--empieza prueba-->
+          <ul class="collapsible popout" data-collapsible="accordion" watch>
+            <li ng-repeat="user in $ctrl.apiData | filter:search">
+                <div class="card-panel grey lighten-5 z-depth-1 collapsible-header">
                     <div class="row valign-wrapper">
                         <div class="col s2">
-                            <img src="images/yuna.jpg" alt="" class="circle responsive-img">
-                            <!-- notice the "circle" class -->
+                            <img src="./assets/img/person01.png" alt="" class="circle responsive-img">
                         </div>
                         <div class="col s10">
-                            <span class="black-text">{{user.name}}</span>
+                              <a class=".">{{user.name}}</a>
                         </div>
+                        <div class="collapsible-body"><p>{{user.info}}</p></div>
                     </div>
                 </div>
-            </div>
+            </li>
+          </ul>
+        <!--termin-->
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Listo</a>
@@ -37,3 +40,15 @@
     </div>
 
 </section>
+<!-- <ul class="collapsible popout" data-collapsible="accordion" watch>
+    <li ng-repeat="single in collapsibleElements">
+        <div class="collapsible-header"><i class="{{single.icon}}"></i>{{single.title}}</div>
+        <div class="collapsible-body"><p>{{single.content}}</p></div>
+    </li>
+</ul>-->
+
+<!-- <script>
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+</script> -->

@@ -4,7 +4,7 @@
 var yaEvent = {
     templateUrl: './app/components/event.component/event.component.html',
     controller: eventCtrl
-};
+}
 
     angular
         .module('yaApp')
