@@ -1,28 +1,32 @@
 <div class="row">
+
     <section id="listaamigos" class="col l4 m4">
-        <h5 class="center">Agrega a tus amigosss.</h5>
-        
+        <br>
+        <h5 class="center">Agrega a tus amigos.</h5>
+
         <div>
             <input ng-model="search.name">
         </div>
 
-
-        <div ng-repeat="user in $ctrl.apiData | filter:search">
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s4">
-                        <img src="{{user.img}}" alt="amigo02" class="circle responsive-img">
-                    </div>
-                    <div class="col s10">
-                        <span class="black-text">{{user.name}}</span>
+        <div id="wrapper">
+            <div class="scrollbar" id="style-7">
+                <div ng-repeat="user in $ctrl.apiData | filter:search">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                        <div class="row valign-wrapper">
+                            <div class="col s4">
+                                <img src="{{user.img}}" alt="amigo02" class="circle responsive-img">
+                            </div>
+                            <div class="col s10">
+                                <span class="black-text">{{user.name}}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <div class="col l8 m8">
-        <h3 id="idPeda" class="center">¡Título de la peda!!!</h3>
+        <h3 id="idPeda" class="center">¡Título de la peda!</h3>
         <br>
         <div id="circle" class="z-depth-3"></div>
         <br>
@@ -30,5 +34,4 @@
             <a class="waves-effect waves-light btn-large purple darken-3">¡Listo!</a>
         </div>
     </div>
-
 </div>
