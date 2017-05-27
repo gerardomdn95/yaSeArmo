@@ -12,6 +12,9 @@
             .when('/home',{
                 template:'<ya-home></ya-home>'
             })
+            .when('/friends',{
+                template:'<ya-friends></ya-friends>'
+            })
 
             .when('/yaevent',{
                 template:'<ya-event></ya-event>'

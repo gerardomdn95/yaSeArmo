@@ -2,9 +2,6 @@
     'use strict'
 
     var yaServices = {
-        bindings: {
-            category: "="
-        },
         templateUrl: './app/components/services.component/services.component.html',
         controller: servicesCtrl
     };
@@ -29,22 +26,7 @@
           accordion : true
         });
 
-        
+
 
     }
 })();
-
-// $scope.collapsibleElements = [{
-//         icon: 'mdi-image-filter-drama',
-//         title: 'First',
-//         content: 'Lorem ipsum dolor sit amet.'
-//     },{
-//         icon: 'mdi-maps-place',
-//         title: 'Second',
-//         content: 'Lorem ipsum dolor sit amet.'
-//     },{
-//         icon: 'mdi-social-whatshot',
-//         title: 'Third',
-//         content: 'Lorem ipsum dolor sit amet.'
-//     }
-// ];
