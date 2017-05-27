@@ -31,6 +31,9 @@
             .when('/prueba',{
                 template:'<h1>Prosible vista</h1>'
             })
+            .when('/yamap',{
+                template:'<ya-map></ya-map>'
+            })
         
             .otherwise({
                 redirectTo:'/home'
