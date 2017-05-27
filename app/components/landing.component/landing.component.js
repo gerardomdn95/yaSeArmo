@@ -1,16 +1,19 @@
-(function(){
+(function () {
     'use strict'
 
-var yaLanding = {
-    templateUrl: './app/components/home.component/landing.component.html',
-    controller: landingCtrl
-};
+    var yaLanding = {
+        bindings: {
+            category: "="
+        },
+        templateUrl: './app/components/landing.component/landing.component.html',
+        controller: landingCtrl
+    };
 
     angular
         .module('yaApp')
         .component('yaLanding', yaLanding);
 
-    function landingCtrl(){
+    function landingCtrl() {
         var vm = this;
     }
 })();

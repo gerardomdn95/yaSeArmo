@@ -3,9 +3,16 @@
 
 
     var yaFriends = {
-        templateUrl:'app/components/friends.component/friends.component.html',
-        controller:friendsCtrl,
-    }
+        bindings: {
+            category: "="
+        },
+        templateUrl: './app/components/friends.component/friends.component.html',
+        controller: friendsCtrl
+    };
+
+    angular
+        .module('yaApp')
+        .component('yaFriends', yaFriends);
 
 
     friendsCtrl.$inject = [ '$location', "usersJson"];
@@ -17,10 +24,6 @@
         users.apiData = usersJson.query();
         console.log(users)
     }
-        
-    angular
-        .module('yaApp')
-        .component('yaFriends',yaFriends)
 })();
 
 

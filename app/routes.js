@@ -1,7 +1,6 @@
 (function () {
+
     'use strict'
-
-
 
     angular
         .module('yaApp')
@@ -38,8 +37,6 @@
                 redirectTo:'/home'
             })
     }
+
+
 })();
-
-
- 
-
