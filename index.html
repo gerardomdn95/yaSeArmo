@@ -14,29 +14,11 @@
 
 <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <title>Ya se armó</title>
+    <base href="/">
 </head>
 
 <body>
 
-
-    <nav>
-    <div class="nav-wrapper">
-        <img src="../assets/img/armologo.svg" alt="¡Ya se armó!" id="logonav">
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">Mi cuenta</a></li>
-            <li><a href="#">Eventos</a></li>
-            <li><a href="#">Pedidos</a></li>
-            <li><a href="#">Paquetes</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="#">Mi cuenta</a></li>
-            <li><a href="#">Eventos</a></li>
-            <li><a href="#">Pedidos</a></li>
-            <li><a href="#">Paquetes</a></li>
-        </ul>
-    </div>
-</nav>
 
   <div ng-view></div>
 
@@ -48,7 +30,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 
     <script src="app/app.module.js"></script>
-    <script src="app/routes.js"></script>
     <script src="app/components/home.component/home.component.js"></script>
     <script src="app/components/event.component/event.component.js"></script>
     <script src="app/components/friends.component/friends.component.js"></script>

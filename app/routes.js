@@ -1,7 +1,6 @@
 (function () {
+
     'use strict'
-
-
 
     angular
         .module('yaApp')
@@ -9,9 +8,6 @@
 
     function config($routeProvider) {
         $routeProvider
-            .when('/friends',{
-                template:'<ya-friends></ya-friends>'
-            })
 
             .when('/event',{
                 template:'<ya-event></ya-event>'
@@ -22,9 +18,9 @@
             })
 
 
-
             .otherwise({
-                redirectTo:'/friendsmo'
-            })
+                redirectTo: '/'
+            });
     }
+
 })();
