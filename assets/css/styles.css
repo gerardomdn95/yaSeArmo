@@ -28,11 +28,11 @@ nav{
 #circle{
     background-color: rgba(34, 0, 127,0.5);
     position: relative;
-    border-radius: 50%;
-    width: 50%;
+    width: 75%;
     height: auto;
     padding-top: 50%;
     margin: auto;
+    
 }
 
 #recuadro{
