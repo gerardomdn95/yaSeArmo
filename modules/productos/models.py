@@ -13,7 +13,7 @@ class Productos(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.TextField()
     categoria = models.CharField(max_length=2, choices=CATEGORIAS)
-    rating = models.DecimalField()
+    rating = models.DecimalField(max_digits=3, decimal_places=2)
 
 
 class Paquetes(models.Model):
@@ -27,7 +27,7 @@ class Pedidos(models.Model):
     nombre = models.CharField(max_length=50)
     direccion = models.TextField()
     fecha_solicitado = models.DateField(auto_now_add=True)
-    hora_entregado = models.DateTimeField(blank=True)
+    hora_entregado = models.DateTimeField(blank=True, null=True)
     paquetes = models.ManyToManyField(Paquetes)
     productos = models.ManyToManyField(Productos)
 
