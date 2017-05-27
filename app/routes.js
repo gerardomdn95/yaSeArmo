@@ -9,18 +9,33 @@
 
     function config($routeProvider) {
         $routeProvider
-            .when('/friends',{
+
+            .when('/home',{
+                template:'<ya-home></ya-home>'
+            })
+
+            .when('/yaevent',{
+                template:'<ya-event></ya-event>'
+            })
+            
+            .when('/yafriends',{
                 template:'<ya-friends></ya-friends>'
             })
 
-            .when('/friendsmo',{
-                template:'<h1>Hola Morros dodo<h1>'
+            .when('/yaservices',{
+                template:'<ya-services></ya-services>'
             })
+
+            .when('/prueba',{
+                template:'<h1>Prosible vista</h1>'
+            })
+
+            
             
             
         
             .otherwise({
-                redirectTo:'/friendsmo'
+                redirectTo:'/home'
             })
     }
 })();
