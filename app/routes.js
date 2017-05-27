@@ -1,4 +1,4 @@
-(function(){
+(function () {
     'use strict';
 
     angular
@@ -8,17 +8,28 @@
     config.$inject = ["$routeProvider"];
     function config($routeProvider) {
         $routeProvider
+            .when('/event',
+            {
+                template: `<ya-event></ya-event>`
+            })
             .when('/friends',
-                {
-                    template: "<ya-friends></ya-friends>"
-                })
-            .when('/login',
-                {
-                    template: "<login></login>"
-                })
+            {
+                template: "<ya-friends></ya-friends>"
+            })
+            .when('/home',
+            {
+                template: "<ya-friends></ya-friends>"
+            })
+            .when('/landing',
+            {
+                template: "<ya-friends></ya-friends>"
+            })
+            .when('/services',
+            {
+                template: "<ya-services></ya-services>"
+            })
             .otherwise({
-                redirectTo : '/'
+                redirectTo: '/'
             });
     }
-
 })();

@@ -2,6 +2,9 @@
     'use strict'
 
     var yaServices = {
+        bindings: {
+            category: "="
+        },
         templateUrl: './app/components/services.component/services.component.html',
         controller: servicesCtrl
     };

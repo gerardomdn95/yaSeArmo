@@ -2,5 +2,5 @@
     'use strict'
 
     angular
-        .module('yaApp', ['ngResource', 'ngRoutes']);
+        .module('yaApp', ['ngResource']);
 })();

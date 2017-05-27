@@ -2,10 +2,13 @@
     'use strict'
 
     var yaFriends = {
+        bindings: {
+            category: "="
+        },
         templateUrl: './app/components/friends.component/friends.component.html',
         controller: friendsCtrl
     };
-    
+
     angular
         .module('yaApp')
         .component('yaFriends', yaFriends);
