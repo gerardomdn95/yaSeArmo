@@ -1,6 +1,7 @@
 (function () {
     'use strict'
 
+
     var yaFriends = {
         bindings: {
             category: "="
@@ -13,12 +14,19 @@
         .module('yaApp')
         .component('yaFriends', yaFriends);
 
-    friendsCtrl.$inject = ["usersJson"];
 
-    function friendsCtrl(usersJson) {
+    friendsCtrl.$inject = [ '$location', "usersJson"];
+
+    function  friendsCtrl($location,usersJson) {
+
         var users = this;
-
+ 
         users.apiData = usersJson.query();
         console.log(users)
     }
 })();
+
+
+
+
+

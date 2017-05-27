@@ -1,13 +1,17 @@
 (function () {
-    'use strict';
+
+    'use strict'
+
+
+>>>>>>> d003a2a992a99038471eeb5134c4566ec59d448c
 
     angular
         .module('yaApp')
         .config(config);
 
-    config.$inject = ["$routeProvider"];
     function config($routeProvider) {
         $routeProvider
+<<<<<<< HEAD
             .when('/event',
             {
                 template: `<ya-event></ya-event>`
