@@ -24,14 +24,13 @@
             .when('/yaservices',{
                 template:'<ya-services></ya-services>'
             })
+            .when('/yapacks',{
+                template:'<ya-packs></ya-packs>'
+            })
 
             .when('/prueba',{
                 template:'<h1>Prosible vista</h1>'
             })
-
-            
-            
-            
         
             .otherwise({
                 redirectTo:'/home'
