@@ -13,7 +13,7 @@ class PaquetesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Paquetes
-        fields = ('id', 'nombre', 'productos')
+        fields = ('id', 'nombre', 'imagen', 'productos')  # ERROR: Despliega solo un producto
 
 
 class PedidosSerializer(serializers.ModelSerializer):

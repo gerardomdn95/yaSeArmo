@@ -11,15 +11,23 @@ class Productos(models.Model):
     )
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
+    imagen = models.URLField(blank=True, null=True)
     descripcion = models.TextField()
     categoria = models.CharField(max_length=2, choices=CATEGORIAS)
     rating = models.DecimalField(max_digits=3, decimal_places=2)
+
+    def __str__(self):
+        return "%s" % self.nombre
 
 
 class Paquetes(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
+    imagen = models.URLField(blank=True, null=True)
     productos = models.ManyToManyField(Productos)
+
+    def __str__(self):
+        return "%s" % self.nombre
 
 
 class Pedidos(models.Model):
@@ -31,5 +39,6 @@ class Pedidos(models.Model):
     paquetes = models.ManyToManyField(Paquetes)
     productos = models.ManyToManyField(Productos)
 
-
+    def __str__(self):
+        return "Pedido N° %s" % self.nombre
 

@@ -42,7 +42,7 @@ class ListInvitados(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ListEncuesta(APIView):
+class ListEncuestas(APIView):
 
     def get(self, request):
         encuesta = Encuesta.objects.all()

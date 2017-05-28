@@ -8,19 +8,52 @@ from django.conf import settings
 from rest_framework import generics, filters, status
 
 
-class ListProductos(generics.ListCreateAPIView):
-    queryset = Productos.objects.all()
-    serializer_class = ProductosSerializer
+class ListProductos(APIView):
+
+    def get(self, request):
+        productos = Productos.objects.all()
+        serializer = ProductosSerializer(productos, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        serializer = ProductosSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ListPaquetes(generics.ListCreateAPIView):
-    queryset = Paquetes.objects.all()
-    serializer_class = PaquetesSerializer
+class ListPaquetes(APIView):
+
+    def get(self, request):
+        paquetes = Paquetes.objects.all()
+        serializer = PaquetesSerializer(paquetes, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        serializer = PaquetesSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ListPedidos(generics.ListCreateAPIView):
-    queryset = Pedidos.objects.all()
-    serializer_class = PedidosSerializer
+class ListPedidos(APIView):
+
+    def get(self, request):
+        pedidos = Pedidos.objects.all()
+        serializer = PedidosSerializer(pedidos, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        serializer = PedidosSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UploadFiles(APIView):
