@@ -35,7 +35,7 @@
         
             .otherwise({
                 redirectTo:'/home'
-            })
+            });
     }
 
 
