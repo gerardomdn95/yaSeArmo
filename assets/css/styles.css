@@ -29,7 +29,6 @@ nav{
   font-family: 'Archivo Black', sans-serif;
 }
 
-
 .drag-continer{
     background-color: rgba(34, 0, 127,0.5);
     position: relative;
@@ -48,8 +47,6 @@ nav{
     margin: auto;
 }
 
-
-
 .card-style{
     width: 300px;
     height: 100px;
@@ -60,8 +57,6 @@ nav{
 .img-card-style{
     width: 50px;
 }
-
-
 
 /**
  * The dnd-list should always have a min-height,
@@ -110,12 +105,9 @@ nav{
     background-color: #dff0d8;
     color: #3c763d;
 }
-¿
-=======
-/*Scroll*/
 
-#info
-{
+/*Scroll*/
+#info{
 	font-size: 18px;
 	color: #555;
 	text-align: center;
@@ -161,3 +153,13 @@ a{
 	width: 10px;
 	background-color: #F5F5F5;
 }
+#style-7::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, #5d006a));
+}
+
+/*Scroll*/
