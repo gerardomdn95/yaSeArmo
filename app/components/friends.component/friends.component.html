@@ -1,17 +1,17 @@
 <div class="row">
     <section id="listaamigos" class="col l4 m4">
-        <h5 class="center">Agrega a tus amigosss.</h5>
-        
+        <h5 class="center">Agrega a tus amigos</h5>
+
         <div>
-            <input ng-model="search.name">
+            <input ng-model="search.name" placeholder="Busca a tus amigos">
         </div>
 
 
-        <div ng-repeat="user in $ctrl.apiData | filter:search">
-            <div class="card-panel grey lighten-5 z-depth-1">
+        <div ng-repeat="user in $ctrl.apiData | filter:search" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div draggable="true" ondragstart="drag(event)" id="drag1"  class="card-panel card-style grey lighten-5 z-depth-1">
                 <div class="row valign-wrapper">
                     <div class="col s4">
-                        <img src="{{user.img}}" alt="amigo02" class="circle responsive-img">
+                        <img src="{{user.img}}" alt="amigo02" class="circle  img-card-style">
                     </div>
                     <div class="col s10">
                         <span class="black-text">{{user.name}}</span>
@@ -21,14 +21,39 @@
         </div>
 
     </section>
-    <div class="col l8 m8">
-        <h3 id="idPeda" class="center">¡Título de la peda!!!</h3>
-        <br>
-        <div id="circle" class="z-depth-3"></div>
-        <br>
+    <h3 id="idPeda" class="center">¡Título de la peda!!!</h3>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"class="z-depth-3 drag-continer col l7 m8" >
+
         <div id="listo" class="center">
             <a class="waves-effect waves-light btn-large purple darken-3">¡Listo!</a>
         </div>
     </div>
 
+
+
+
+
+
 </div>
+
+
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
