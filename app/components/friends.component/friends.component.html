@@ -1,13 +1,19 @@
 <div class="row">
+
     <section id="listaamigos" class="col l4 m4">
-        <h5 class="center">Agrega a tus amigos</h5>
+
+        <br>
+        <h5 class="center">Agrega a tus amigos.</h5>
+
 
         <div>
             <input ng-model="search.name" placeholder="Busca a tus amigos">
         </div>
 
 
-        <div ng-repeat="user in $ctrl.apiData | filter:search" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<div id="wrapper">
+    <div class="scrollbar" id="style-7">
+        <div ng-repeat="user in $ctrl.apiData | filter:search" id="div1" class="scrollbar" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div draggable="true" ondragstart="drag(event)" id="drag1"  class="card-panel card-style grey lighten-5 z-depth-1">
                 <div class="row valign-wrapper">
                     <div class="col s4">
@@ -15,20 +21,25 @@
                     </div>
                     <div class="col s10">
                         <span class="black-text">{{user.name}}</span>
+
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
+        </div>
     </section>
+
     <h3 id="idPeda" class="center">¡Título de la peda!!!</h3>
 
     <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"class="z-depth-3 drag-continer col l7 m8" >
+
 
         <div id="listo" class="center">
             <a class="waves-effect waves-light btn-large purple darken-3">¡Listo!</a>
         </div>
     </div>
+
 
 
 
