@@ -1,72 +1,25 @@
-<!-- <section class="row uno">
-  <div class="col m8 l8 s8 offset-m4 offset-l4">
-    <div class="col s1 m1 l1">
-      <img src="../assets/img/person01.png" alt="" class="circle responsive-img">
-    </div>
-    <div class="col s1 m1 l1">
-      <img src="../assets/img/person01.png" alt="" class="circle responsive-img">
-    </div>
-    <div class="col s1 m1 l1">
-      <img src="../assets/img/person01.png" alt="" class="circle responsive-img">
-    </div>
-    <div class="col s1 m1 l1">
-      <img src="../assets/img/person01.png" alt="" class="circle responsive-img">
-    </div>
-    <div class="col s1 m1 l1">
-      <img src="../assets/img/person01.png" alt="" class="circle responsive-img">
-    </div>
-  </div>
-</section>
-
-<section id="listaamigos">
-<div class="col">
-
-</div>
-  <div class="row">
-    <div class="col m5 l5 s5 offset-l1 offset-m1">
-      <img class="responsive-img circle" src="../assets/img/person01.png">
-    </div>
-  </div>
-    <section class="row">
-    <div class="col m5 l5 s5 offset-l1 offset-m1">
-      <h5 class="center">Nombre Evento</h5>
-    </div>
-  </section>
-  <section class="row">
-  <div class="col m5 l5 s5 offset-l1 offset-m1">
-          <div class="input-field inline">
-            <input id="email" type="email" class="validate">
-            <label for="email" data-error="wrong" data-success="right">Dirección</label>
+<div class="row row-event">
+      <div class="col s12 m4 l4">
+        <div class="row">
+          <div class="col s12 m5">
+            <div class="card">
+              <div class="card-image circle">
+                <img src="./assets/img/person01.png">
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              </div>
+              <div class="card-content">
+                <span class="card-title event-titulo">Nombre Evento</span>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+              </div>
+            </div>
           </div>
-  </div>
-  </section>
-  <section class="row">
-  <div class="col m5 l5 s5 offset-l1 offset-m1">
-          <p>Texto descriptivo</p>
-  </div>
-  </section>
-</section>
-
-<section class="row">
-<div class="col m6 l6 s6 offset-l2 offset-m2">
-  <div class="row">
-    <div class="col s4 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="../assets/img/cerveza.jpg">
-          <span class="card-title">Card Title</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
-    </div>
-  </div>
+      <div class="col s12 m8 l8">
+        <div class="chip" ng-repeat="user in $ctrl.apiData">
+          <img src="./assets/img/person01.png" alt="Contact Person">
+        {{user.name}}
+        </div>
+
+      </div>
 </div>
-</section>
-
-
-<!--<section id="recuadro">
-
-</section> -->
