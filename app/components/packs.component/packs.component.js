@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict'
 
     var yaPacks = {
@@ -12,6 +12,7 @@
 
         var users = this;
         $('.collapsible').collapsible();
+
         users.apiData = usersJson.query();
         console.log(users)
     }

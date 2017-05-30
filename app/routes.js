@@ -15,6 +15,9 @@
             .when('/yafriends', {
                 template: '<ya-friends></ya-friends>'
             })
+            .when('/yalogin', {
+                template: '<ya-login></ya-login>'
+            })
             .when('/yaevent', {
                 template: '<ya-event></ya-event>'
             })
