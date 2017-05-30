@@ -45,13 +45,10 @@ class DetailEvento(APIView):
         evento.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
 class ListInvitados(APIView):
 
     def get(self, request):
         invitados = Invitado.objects.all()
-        print("INVITADOS####################################")
-        print(invitados[0].user.last_name)
         serializer = InvitadosSerializer(instance=invitados, many=True, read_only=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -83,7 +80,6 @@ class DetailInvitados(APIView):
         invitados = get_object_or_404(Invitado, id=pk)
         invitados.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
 
 class ListEncuestas(APIView):
 

@@ -11,6 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class InvitadosSerializer(serializers.ModelSerializer):  # DUDA: ¿Cómo serializar invitados con el modelo de usuarios?
     """Serializando invitados para incluirlos en eventos"""
+
     user = UserSerializer(read_only=True)
 
     class Meta:
@@ -33,5 +34,6 @@ class EventoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Evento
         fields = ('id', 'nombre', 'ubicacion', 'fecha', 'invitados', 'encuesta')
+
 
 

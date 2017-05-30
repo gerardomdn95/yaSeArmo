@@ -4,6 +4,7 @@ from django.contrib.postgres.fields import ArrayField
 
 
 class Invitado(models.Model):
+
     user = models.OneToOneField(User, related_name='usuarios')  # Nombre viene incluido en el modelo de user
     imagen = models.URLField(blank=True, null=True)
 

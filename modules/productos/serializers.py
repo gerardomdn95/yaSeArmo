@@ -13,7 +13,11 @@ class PaquetesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Paquetes
+<<<<<<< HEAD
         fields = ('id', 'nombre', 'imagen', 'productos')
+=======
+        fields = ('id', 'nombre', 'imagen', 'productos')  # ERROR: Despliega solo un producto
+>>>>>>> 69d6b8d24a346ea90951b1e3b2f984730b429054
 
 
 class PedidosSerializer(serializers.ModelSerializer):
