@@ -1,9 +1,9 @@
 .idea/
-*.pyc
+__init__.py
+*/settings/*
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 *$py.class
 
 # C extensions
