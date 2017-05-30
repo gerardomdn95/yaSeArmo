@@ -31,6 +31,7 @@
             <EditText android:id="@+id/input_crear_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:inputType="text"
                 android:minLines="3"
                 android:hint="Nombre"/>
@@ -48,6 +49,7 @@
             <EditText android:id="@+id/input_crear_correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:inputType="textEmailAddress"
                 android:hint="Correo" />
 
@@ -64,6 +66,7 @@
             <EditText android:id="@+id/input_crear_contraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:inputType="textPassword"
                 android:hint="Contraseña"/>
 

@@ -47,11 +47,14 @@ public class LoginActivity extends AppCompatActivity {
 
         // Obtenemos una instancia de Firebase
         mAuth = FirebaseAuth.getInstance();
+        Log.e("myLog","Instancia de Firebase obtenida");
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 // Comprobamos si tenemos un usuario cargado
                 if(firebaseAuth.getCurrentUser() != null) {
+                    Log.e("myLog", "Nombre del usuario: " + mAuth.getCurrentUser().getDisplayName());
                     // Lanzamos la actividad que contiene el menú principal
                     startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
                 }
