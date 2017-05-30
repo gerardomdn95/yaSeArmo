@@ -167,3 +167,12 @@ a{
 .row-event{
   margin-top: 3%;
 }
+
+#card-row{
+   position: absolute;
+   top: 300px;
+   left: 225px;
+   width: 1000px;
+   z-index: 1000;
+
+}
