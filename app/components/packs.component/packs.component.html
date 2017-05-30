@@ -2,23 +2,26 @@
 <section id="recuadro">
 
     <section class="row">
+
         <div class="card col l4 m4 s12 offset-l1" ng-repeat="user in $ctrl.apiData | limitTo: 4">
+
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
             </div>
+
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">Paquete {{user.name}}<i class="material-icons right">more_vert</i></span>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Saca el pack<i class="material-icons right">close</i></span>
-                <p>gggggg</p>
 
-                <ul class="collapsible" data-collapsible="accordion">
-                    <li ng-repeat="user in $ctrl.apiData">
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{user.name}}</div>
-                        <div class="collapsible-body"><span>Info info.</span></div>
-                    </li>
-                </ul>
+                <span class="card-title grey-text text-darken-4">Saca el pack<i class="material-icons right">close</i></span>
+                <p>Este paquete contiene:</p>
+
+                <div ng-repeat="user in $ctrl.apiData">
+                    <p>{{user.name}}</p>
+                </div>
+
+
                 <a href="/yalogin" class="waves-effect waves-light btn right">Armar</a>
             </div>
         </div>
