@@ -16,6 +16,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.masavi.yasearmo.R;
+import com.masavi.yasearmo.activities.Login.LoginActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;

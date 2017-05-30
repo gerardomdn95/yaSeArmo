@@ -1,4 +1,4 @@
-package com.masavi.yasearmo.activities;
+package com.masavi.yasearmo.activities.Login;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -6,8 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -24,7 +23,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.masavi.yasearmo.R;
+import com.masavi.yasearmo.activities.MainMenuActivity;
 import com.masavi.yasearmo.util.Constants;
+
+import org.w3c.dom.Text;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -37,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
 
         // Obtenemos una instancia de Firebase
         mAuth = FirebaseAuth.getInstance();
@@ -76,6 +83,11 @@ public class LoginActivity extends AppCompatActivity {
                 signIn();
             }
         });
+    }
+
+    @OnClick(R.id.link_crear_cuenta)
+    public void onClickCrearCuenta(View view) {
+        startActivity(new Intent(LoginActivity.this, CrearCuentaActivity.class));
     }
 
     @Override

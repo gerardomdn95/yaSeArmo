@@ -2,6 +2,18 @@
 <resources>
     <color name="colorPrimary">#5d006a</color>
     <color name="colorPrimaryDark">#3e0047</color>
+    <color name="colorPrimaryEvenDarker">#2a0030</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FAFAFA</color>
+    <color name="red">#d61212</color>
+    <color name="grey">#d9d9d9</color>
+
+    <color name="blue1">#3797e1</color>
+    <color name="blue2">#065897</color>
+
+    <color name="green1">#6fe146</color>
+    <color name="green2">#3eae16</color>
+
+    <color name="mango1">#f5cb56</color>
+    <color name="mango2">#c49a23</color>
 </resources>

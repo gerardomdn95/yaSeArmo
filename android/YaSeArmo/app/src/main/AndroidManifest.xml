@@ -9,21 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.LoginActivity"
-                  android:theme="@style/AppTheme.NoTitle" >
+        <activity
+            android:name=".activities.Login.LoginActivity"
+            android:theme="@style/AppTheme.NoTitle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PerfilActivity"/>
+        <activity android:name=".activities.PerfilActivity" />
         <activity android:name=".activities.MainMenuActivity" />
         <activity android:name=".activities.Fiesta.FiestaActivity" />
         <activity android:name=".activities.Fiesta.ManejarFiestaActivity" />
         <activity android:name=".activities.Paquetes.PaquetesActivity" />
         <activity android:name=".activities.Eventos.EventosActivity" />
-        <activity android:name=".activities.Servicios.ServiciosActivity"></activity>
+        <activity android:name=".activities.Servicios.ServiciosActivity" />
+        <activity android:name=".activities.Login.CrearCuentaActivity"
+                  android:theme="@style/AppTheme.NoTitle"></activity>
     </application>
 
 </manifest>
