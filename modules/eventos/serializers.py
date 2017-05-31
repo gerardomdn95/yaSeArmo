@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('username', 'first_name', 'last_name', 'email')
 
 
-class InvitadosSerializer(serializers.ModelSerializer):  # DUDA: ¿Cómo serializar invitados con el modelo de usuarios?
+class InvitadoSerializer(serializers.ModelSerializer):  # DUDA: ¿Cómo serializar invitados con el modelo de usuarios?
     """Serializando invitados para incluirlos en eventos"""
 
     user = UserSerializer(read_only=True)
@@ -28,7 +28,7 @@ class EncuestaSerializer(serializers.ModelSerializer):
 
 class EventoSerializer(serializers.ModelSerializer):
 
-    invitados = InvitadosSerializer(read_only=True, many=True)
+    invitados = InvitadoSerializer(read_only=True, many=True)
     encuesta = EncuestaSerializer(read_only=True)
 
     class Meta:

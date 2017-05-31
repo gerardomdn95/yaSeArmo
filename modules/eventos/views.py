@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from .serializers import InvitadosSerializer, EventoSerializer, EncuestaSerializer, UserSerializer
+from .serializers import InvitadoSerializer, EventoSerializer, EncuestaSerializer, UserSerializer
 from .models import Evento, Invitado, Encuesta
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -7,6 +7,7 @@ from rest_framework.parsers import FormParser, MultiPartParser
 from django.conf import settings
 from rest_framework import generics, filters, status
 from django.contrib.auth.models import User
+import django_filters.rest_framework
 
 
 class ListEventos(APIView):
@@ -45,41 +46,6 @@ class DetailEvento(APIView):
         evento.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-class ListInvitados(APIView):
-
-    def get(self, request):
-        invitados = Invitado.objects.all()
-        serializer = InvitadosSerializer(instance=invitados, many=True, read_only=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-    def post(self, request):
-        serializer = InvitadosSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class DetailInvitados(APIView):
-    def get(self, request, pk):
-        invitados = get_object_or_404(Invitado, id=pk)
-        serializer = InvitadosSerializer(invitados)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-    def put(self, request, pk):
-        invitados = get_object_or_404(Invitado, id=pk)
-        serializer = InvitadosSerializer(invitados, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, pk):
-        invitados = get_object_or_404(Invitado, id=pk)
-        invitados.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class ListEncuestas(APIView):
 
@@ -98,7 +64,25 @@ class ListEncuestas(APIView):
 
 
 class DetailEncuesta(APIView):
-    pass
+    
+    def get(self, request, pk):
+        encuestas = get_object_or_404(Encuesta, id=pk)
+        serializer = EncuestaSerializer(encuestas)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk):
+        encuestas = get_object_or_404(Invitado, id=pk)
+        serializer = EncuestaSerializer(encuestas, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        encuestas = get_object_or_404(Invitado, id=pk)
+        encuestas.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class ListUsers(APIView):
@@ -107,6 +91,27 @@ class ListUsers(APIView):
         user = User.objects.all()
         serializer = UserSerializer(user, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class DetailUsers(APIView):
+    def get(self, request, pk):
+        user = get_object_or_404(User, id=pk)
+        serializer = UserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk):
+        user = get_object_or_404(User, id=pk)
+        serializer = UserSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        user = get_object_or_404(User, id=pk)
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class UploadFiles(APIView):

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'modules.eventos',
     'modules.productos',
     'rest_framework',
+    'rest_framework_docs',
 ]
 
 MIDDLEWARE = [
