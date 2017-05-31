@@ -1,8 +1,11 @@
 <br><br>
 
-<img src="" alt="">
+<center>
+    <img class="responsive-img" src="/assets/img/categorias.png" alt="">
+</center>
 
-<h3 id="idPeda" class="center">Categorías</h3>
+
+
 <br>
 
 <div class="container">
@@ -12,15 +15,15 @@
                 <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Paquete {{user.name}}<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Saca el pack<i class="material-icons right">close</i></span>
-                <p>Este paquete contiene:</p>
+                <span class="card-title grey-text text-darken-4">Saca el pack y la categoría<i class="material-icons right">close</i></span>
+                <p>Servicios disponibles:</p>
                 <div ng-repeat="user in $ctrl.apiData">
                     <p>{{user.name}}</p>
                 </div>
-                <a href="/yalogin" class="waves-effect waves-light btn right">Armar</a>
+                <a href="/yalogin" class="waves-effect waves-light btn right purple darken-3">Ármala</a>
             </div>
         </div>
     </section>
