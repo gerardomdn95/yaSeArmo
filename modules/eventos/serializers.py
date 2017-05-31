@@ -9,14 +9,13 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('username', 'first_name', 'last_name', 'email')
 
 
-class InvitadoSerializer(serializers.ModelSerializer):  # DUDA: ¿Cómo serializar invitados con el modelo de usuarios?
+class InvitadoSerializer(serializers.ModelSerializer):
     """Serializando invitados para incluirlos en eventos"""
-
     user = UserSerializer(read_only=True)
 
     class Meta:
         model = Invitado
-        fields = ('id', 'user', 'imagen')  # ERROR: No despliega información de usuario
+        fields = ('id', 'user', 'imagen')
 
 
 class EncuestaSerializer(serializers.ModelSerializer):

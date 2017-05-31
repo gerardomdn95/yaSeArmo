@@ -11,7 +11,7 @@ import django_filters.rest_framework
 
 
 class ListEventos(APIView):
-
+    """Información de todos los eventos creados"""
     def get(self, request):
         eventos = Evento.objects.all()
         serializer = EventoSerializer(eventos, many=True)
@@ -27,6 +27,7 @@ class ListEventos(APIView):
 
 
 class DetailEvento(APIView):
+    """Información de un evento en particulas, donde <pk> = id del evento"""
     def get(self, request, pk):
         evento = get_object_or_404(Evento, id=pk)
         serializer = EventoSerializer(evento)
@@ -48,7 +49,7 @@ class DetailEvento(APIView):
 
 
 class ListEncuestas(APIView):
-
+    """Información de todas las encuestas creadas"""
     def get(self, request):
         encuesta = Encuesta.objects.all()
         serializer = EncuestaSerializer(encuesta, many=True)
@@ -85,8 +86,45 @@ class DetailEncuesta(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ListUsers(APIView):
+class ListInvitados(APIView):
+    """Información completa de los usuarios"""
+    def get(self, request):
+        invitados = Invitado.objects.all()
+        serializer = InvitadoSerializer(instance=invitados, many=True, read_only=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request):
+        serializer = InvitadoSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class DetailInvitados(APIView):
+    def get(self, request, pk):
+        invitados = get_object_or_404(Invitado, id=pk)
+        serializer = InvitadoSerializer(invitados)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk):
+        invitados = get_object_or_404(Invitado, id=pk)
+        serializer = InvitadoSerializer(invitados, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        invitados = get_object_or_404(Invitado, id=pk)
+        invitados.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class ListUsers(APIView):
+    """Endpoint para TEST, para traer toda la información usar endpoint de /eventos/invitados/"""
     def get(self, request):
         user = User.objects.all()
         serializer = UserSerializer(user, many=True)
@@ -94,6 +132,7 @@ class ListUsers(APIView):
 
 
 class DetailUsers(APIView):
+    """Endpoint para TEST, para traer toda la información usar endpoint de /eventos/invitados/"""
     def get(self, request, pk):
         user = get_object_or_404(User, id=pk)
         serializer = UserSerializer(user)

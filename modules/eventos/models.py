@@ -14,6 +14,7 @@ class Invitado(models.Model):
 
 class Encuesta(models.Model):
     id = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=100)
     opciones = ArrayField(
         models.CharField(max_length=100)
     )
