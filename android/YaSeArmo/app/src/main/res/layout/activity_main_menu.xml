@@ -130,7 +130,7 @@
                             android:layout_gravity="center"
                             android:layout_width="135dp"
                             android:layout_height="128dp"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="9dp"
                             android:clickable="true"
                             />
 
@@ -173,7 +173,7 @@
                             android:layout_height="25dp" />
 
                         <ImageView
-                            android:id="@+id/btn_servicios"
+                            android:id="@+id/btn_pedidos"
                             android:src="@drawable/cheve"
                             android:layout_gravity="center"
                             android:layout_width="150dp"

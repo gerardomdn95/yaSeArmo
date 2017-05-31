@@ -15,11 +15,11 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.masavi.yasearmo.R;
-import com.masavi.yasearmo.activities.Eventos.EventosActivity;
-import com.masavi.yasearmo.activities.Fiesta.ManejarFiestaActivity;
+import com.masavi.yasearmo.activities.Eventos.ManejarEventosActivity;
+import com.masavi.yasearmo.activities.Armala.ArmalaActivity;
 import com.masavi.yasearmo.activities.Login.LoginActivity;
 import com.masavi.yasearmo.activities.Paquetes.PaquetesActivity;
-import com.masavi.yasearmo.activities.Servicios.ServiciosActivity;
+import com.masavi.yasearmo.activities.Pedidos.ManejarPedidosActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -82,13 +82,13 @@ public class MainMenuActivity extends AppCompatActivity {
     @OnClick(R.id.btn_armala)
     public void onClickArmala(View view) {
         view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
-        startActivity(new Intent(MainMenuActivity.this, ManejarFiestaActivity.class));
+        startActivity(new Intent(MainMenuActivity.this, ArmalaActivity.class));
     }
 
     @OnClick(R.id.btn_eventos)
     public void onClickEventos(View view){
         view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
-        startActivity(new Intent(MainMenuActivity.this, EventosActivity.class));
+        startActivity(new Intent(MainMenuActivity.this, ManejarEventosActivity.class));
     }
 
     @OnClick(R.id.btn_paquetes)
@@ -97,10 +97,10 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(new Intent(MainMenuActivity.this, PaquetesActivity.class));
     }
 
-    @OnClick(R.id.btn_servicios)
+    @OnClick(R.id.btn_pedidos)
     public void onClickServicios(View view){
         view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
-        startActivity(new Intent(MainMenuActivity.this, ServiciosActivity.class));
+        startActivity(new Intent(MainMenuActivity.this, ManejarPedidosActivity.class));
     }
 
 }

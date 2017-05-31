@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.masavi.yasearmo.activities.Eventos.ManejarEventosActivity">
+
+    <TextView
+        android:id="@+id/tv_manejar_eventos_titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Aquí va el título del conjunto de tarjetas"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/layout_arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/flecha_izq" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_manejar_evento_continuar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="continuar"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quiz_img_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_layout"
+            android:layout_toRightOf="@+id/layout_arrow_left"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/flecha_der" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
