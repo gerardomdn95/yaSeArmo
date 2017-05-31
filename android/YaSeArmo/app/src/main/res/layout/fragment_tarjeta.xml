@@ -18,16 +18,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="25dp"
+            android:layout_margin="20dp"
             android:text="Título de la pregunta"
             android:textSize="17sp" />
 
         <ImageView
+            android:id="@+id/tarjeta_img"
             android:layout_gravity="center"
             android:layout_width="300dp"
-            android:layout_height="250dp" />
+            android:layout_height="200dp" />
 
         <TextView
+            android:id="@+id/tarjeta_desc"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

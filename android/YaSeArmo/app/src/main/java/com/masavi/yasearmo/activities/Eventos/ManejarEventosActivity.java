@@ -51,7 +51,11 @@ public class ManejarEventosActivity extends AppCompatActivity
         getData();
 
         //Inicialización de la primer pregunta
-        cambiarFragmento(TarjetaFragment.newInstance(mListTarjetas.get(mPosicionTarjeta = 0).getTitulo()));
+        cambiarFragmento(TarjetaFragment.newInstance(
+                mListTarjetas.get(mPosicionTarjeta = 0).getTitulo(),
+                mListTarjetas.get(mPosicionTarjeta).getImgUrl(),
+                mListTarjetas.get(mPosicionTarjeta).getContenido()
+        ));
     }
 
     /*
@@ -59,10 +63,14 @@ public class ManejarEventosActivity extends AppCompatActivity
      */
     private void getData()
     {
-        mListTarjetas.add(new Tarjeta(0, "Titulo", "Contenido", "url-de-imagen"));
-        mListTarjetas.add(new Tarjeta(1, "Titulo", "Contenido", "url-de-imagen"));
-        mListTarjetas.add(new Tarjeta(2, "Titulo", "Contenido", "url-de-imagen"));
-        mListTarjetas.add(new Tarjeta(3, "Titulo", "Contenido", "url-de-imagen"));
+        mListTarjetas.add(new Tarjeta(0, "Cumpleaños", getString(R.string.lorem_ipsum),
+                "http://www.elblogdeyes.com/wp-content/uploads/fiestas-de-cumplea%C3%B1os.jpg"));
+        mListTarjetas.add(new Tarjeta(1, "Reunión", getString(R.string.lorem_ipsum),
+                "http://www.ciudaris.com/blog/wp-content/uploads/banner-fiesta-coctel2.jpg"));
+        mListTarjetas.add(new Tarjeta(2, "Bautizo", getString(R.string.lorem_ipsum),
+                "http://www.lesnuzparty.com/blog/wp-content/uploads/2013/01/Celebrar-bautizo-en-casa.jpg"));
+        mListTarjetas.add(new Tarjeta(3, "Fiesta de Compromiso", getString(R.string.lorem_ipsum),
+                "https://cdn0.bodas.com.mx/usr/8/2/4/1/cfb_437663.jpg"));
     }
 
     @OnClick(R.id.quiz_img_arrow_right)
@@ -72,12 +80,16 @@ public class ManejarEventosActivity extends AppCompatActivity
         if (mPosicionTarjeta < mListTarjetas.size() - 1)
         {
             // Aumentamos en 1 la posición actual de tarjeta y cambiamos de fragmento, según la posición
-            cambiarFragmento(TarjetaFragment.newInstance(mListTarjetas.get(++mPosicionTarjeta).getTitulo()));
+            cambiarFragmento(TarjetaFragment.newInstance(
+                    mListTarjetas.get(++mPosicionTarjeta).getTitulo(),
+                    mListTarjetas.get(mPosicionTarjeta).getImgUrl(),
+                    mListTarjetas.get(mPosicionTarjeta).getContenido()
+            ));
             idTarjeta++;
         }
         else
         {
-            // TODO: Hacer invisible la flecha a la derecha
+            // TODO: Hacer invisible la flecha a la derecha al terminar los fragmentos
         }
     }
 
