@@ -1,53 +1,8 @@
 <div class="row">
 
-      <div class="col s12 m8 l9" id="recuadro">
+      <div class="col s12 m8 l9">
 
-        <section id="modl"></section>
-        <div class="col l3 m3">
-          <div class="col s2">
-              <img src="images/yuna.jpg" alt="" class="circle responsive-img">
-          </div>
-            <a href=""><img src="./assets/img/beer.png" alt="" class="circle responsive-img catego"></a>
-            <a class="btn-floating btn-large waves-effect waves-light indigo darken-2" href="#modal1"><i class="material-icons">add</i></a>
-            <a class="btn-floating btn-large waves-effect waves-light indigo darken-2" href="#modal1"><i class="material-icons">add</i></a>
-            <a class="btn-floating btn-large waves-effect waves-light indigo darken-2" href="#modal1"><i class="material-icons">add</i></a>
-        </div>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4 class="center">Alcohol</h4>
-                <div>
-                    <input ng-model="search.name">
-                </div>
-            <!--empieza prueba-->
-              <ul class="collapsible popout" data-collapsible="accordion" watch>
-                <li ng-repeat="user in $ctrl.apiData | filter:search">
-                    <div class="card-panel grey lighten-5 z-depth-1 collapsible-header">
-                        <div class="row valign-wrapper">
-                            <div class="col s2">
-                                <img src="./assets/img/person01.png" alt="" class="circle responsive-img">
-                            </div>
-                            <div class="col s10">
-                                  <a class=".">{{user.name}}</a>
-                            </div>
-                            <div class="collapsible-body"><p>{{user.info}}</p></div>
-                        </div>
-                    </div>
-                </li>
-              </ul>
-            <!--termina-->
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Listo</a>
-            </div>
-        </div>
 
-    </section>
-  <ul class="collapsible popout" data-collapsible="accordion" watch>
-        <li ng-repeat="single in collapsibleElements">
-            <div class="collapsible-header"><i class="{{single.icon}}"></i>{{single.title}}</div>
-            <div class="collapsible-body"><p>{{single.content}}</p></div>
-        </li>
-    </ul>
 
 
 
