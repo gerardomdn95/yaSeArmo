@@ -19,5 +19,5 @@ import yaAPI.api_urls as api_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^yaApi/v1/', include(api_urls)),
+    url(r'^yaAPI/v1/', include(api_urls)),
 ]
