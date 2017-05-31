@@ -1,24 +1,30 @@
 <div class="row row-event">
+  <div class="row"><div class="col m6 l6 offset-l6"><img class="responsive-img" src="./assets/img/eventos.png" alt=""></div></div>
       <div class="col m6 l4">
-            <div class="card">
+            <div class="card" style="background: -webkit-linear-gradient(left, #5d006a, #22007f)">
               <div class="card-image">
                 <img src="./assets/img/person01.png" class="responsive-img circle">
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <a class="btn-floating halfway-fab waves-effect waves-lighten-5"><i class="material-icons">add</i></a>
               </div>
               <div class="card-content">
-                <span class="card-title event-titulo">Nombre Evento</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                <span class="card-title event-titulo" style="color: #ffffff">Nombre Evento</span>
+                <p style="color:#ffffff">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
               </div>
             </div>
       </div>
 
-      <div class="col m8 l8 grey lighten-3">
+      <div class="col m8 l8 grey lighten-4">
+      <div class="row"><div class="col m2 l2 section"><h5>Invitados</h5></div></div>
+      <div class="divider"></div>
+      <div class="section">
         <div class="chip" ng-repeat="user in $ctrl.apiData">
           <img src="./assets/img/person01.png" alt="Contact Person">
         {{user.name}}
         </div>
       </div>
+      </div>
 
+      <h5>Servicios</h5>
       <div class="row card-row">
       <div class="col m2 l2" ng-repeat="user in $ctrl.apiData">
         <div class="card sticky-action">
