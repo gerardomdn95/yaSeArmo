@@ -233,11 +233,18 @@ h2{
   float: right;
 }
 
+.circle{
+  width: 170px;
+}
+
+.card-avatar{
+  text-align: center;
+}
+
 #contacto{
   max-height: 564px;
   background-color: #5d006a;
-=======
-
+}
 
 .input-search-friends{
     width: 308px !important;
@@ -250,18 +257,15 @@ h2{
     bottom: 20px;
     position: absolute;
     margin: 0px 24% 20px 41%;
-
+}
 .row-event{
   margin-top: 3%;
 }
 
-#card-row{
+#-row{
    position: absolute;
    top: 300px;
    left: 225px;
    width: 1000px;
    z-index: 1000;
-
-
->>>>>>> 77cc72ba2bc3c8e327aa7bf5cbbcc4fb376023b8
 }

@@ -2,25 +2,28 @@
     'use strict'
 
     var yaEvent = {
-        bindings: {
-            category: "="
-        },
         templateUrl: './app/components/event.component/event.component.html',
         controller: eventCtrl
     };
 
+    angular
+        .module('yaApp')
+        .component('yaEvent', yaEvent);
 
-        angular
-            .module('yaApp')
-            .component('yaEvent', yaEvent);
+    eventCtrl.$inject = ['$location', 'eventApi'];
 
-        eventCtrl.$inject = ["usersJson"];
+    function eventCtrl($location, eventApi) {
+        var vm = this;
 
-        function eventCtrl(usersJson) {
-            var users = this;
+        vm.evento = null;
+        vm.apiData = null;
 
-            users.apiData = usersJson.query();
-            console.log(users)
+        vm.$onInit = onInit;
 
+        function onInit() {
+
+            vm.apiData = eventApi.query()
+            console.log(vm.apiData)
         }
+    }
 })();

@@ -4,13 +4,11 @@
     <img class="responsive-img" src="/assets/img/paquetes.png" alt="">
 </center>
 
-
-
-<br>
-
 <div class="container">
     <section class="row">
-        <div class="card col l6 m6 s12" ng-repeat="pack in $ctrl.apiData | limitTo: 6">
+
+        <div class="card col l6 m6 s12" ng-repeat="pack in $ctrl.apiData">
+
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{pack.imagen}}">
             </div>
