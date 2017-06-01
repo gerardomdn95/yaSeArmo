@@ -4,15 +4,11 @@
     <img class="responsive-img" src="/assets/img/paquetes.png" alt="">
 </center>
 
-
-
-<br>
-
 <div class="container">
     <section class="row">
-        <div class="card col l6 m6 s12" ng-repeat="pack in $ctrl.apiData | limitTo: 4">
+        <div class="card col l6 m6 s12" ng-repeat="pack in $ctrl.apiData">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
+                <img class="activator" src="{{pack.imagen}}">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{pack.nombre}}<i class="material-icons right">more_vert</i></span>
