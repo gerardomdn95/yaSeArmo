@@ -5,7 +5,7 @@
   <div class="col m6 l4">
     <div class="card" style="background: -webkit-linear-gradient(left, #5d006a, #22007f)">
       <div class="card-image">
-        <img src="{{$ctrl.apiData[4].imagen}}" class="responsive-img circle">
+        <img src="{{$ctrl.apiData[4].nombre}}" class="responsive-img circle">
         <a class="btn-floating halfway-fab waves-effect waves-lighten-5"><i class="material-icons">add</i></a>
       </div>
       <div class="card-content">
@@ -34,13 +34,13 @@
   <div class="row card-row">
     <h5>Servicios</h5>
     <div class="divider"></div>
-    <div class="col m2 l2" ng-repeat="producto in $ctrl.apiData">
+    <div class="col m2 l2" ng-repeat="user in $ctrl.apiData">
       <div class="card sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{producto.nombre}}<i class="material-icons right">more_vert</i></span>
+          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
           <p><a href="#">This is a link</a></p>
         </div>
         <div class="card-reveal">

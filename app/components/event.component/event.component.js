@@ -10,7 +10,7 @@
         .module('yaApp')
         .component('yaEvent', yaEvent);
 
-    eventCtrl.$inject = ['$location', 'packsApi'];
+    eventCtrl.$inject = ['$location', 'eventApi'];
 
     function eventCtrl($location, eventApi) {
         var vm = this;
