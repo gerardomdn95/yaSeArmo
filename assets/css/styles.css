@@ -52,6 +52,7 @@ nav{
     height: 100px;
     display: inline-block;
     margin-left: 20px !important;
+    margin-right: 20px;
 }
 
 .img-card-style{
@@ -118,15 +119,13 @@ a{
 	color: #074E8C;
 }
 
-.scrollbar
-{
-    margin-left: -25px;
+.scrollbar{
     float: left;
-    height: 600px;
-    width: 110%;
-    background: #F5F5F5;
+    height: 60vh;
+    background: #fffffff;
     overflow-y: scroll;
-    margin-bottom: 25px;
+    margin-left: 10%;
+    width: 360px;
 }
 
 .force-overflow
@@ -164,6 +163,7 @@ a{
 
 /*Scroll*/
 
+<<<<<<< HEAD
 /*StylesHome*/
 
 body{
@@ -231,4 +231,32 @@ h2{
 #contacto{
   max-height: 564px;
   background-color: #5d006a;
+=======
+
+
+.input-search-friends{
+    width: 308px !important;
+    float: initial;
+    margin-right: 40px !important;
+}
+
+
+.button-listo-own-styles{
+    bottom: 20px;
+    position: absolute;
+    margin: 0px 24% 20px 41%;
+
+.row-event{
+  margin-top: 3%;
+}
+
+#card-row{
+   position: absolute;
+   top: 300px;
+   left: 225px;
+   width: 1000px;
+   z-index: 1000;
+
+
+>>>>>>> 77cc72ba2bc3c8e327aa7bf5cbbcc4fb376023b8
 }

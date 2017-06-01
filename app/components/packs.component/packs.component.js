@@ -6,17 +6,27 @@
         controller: packsCtrl
     };
 
-    packsCtrl.$inject = ['$location', "usersJson"];
-
-    function packsCtrl($location, usersJson) {
-
-        var users = this;
-        $('.collapsible').collapsible();
-        users.apiData = usersJson.query();
-        console.log(users)
-    }
-
     angular
         .module('yaApp')
         .component('yaPacks', yaPacks);
+
+    packsCtrl.$inject = ['$location', 'packsApi'];
+
+    function packsCtrl($location, packsApi) {
+        var vm = this;
+
+        vm.packs = null;
+        vm.apiData = null;
+
+        vm.$onInit = onInit;
+        //vm.otherFun = function(){}
+
+        function onInit() {
+
+            vm.apiData = packsApi.query()
+            console.log(vm.apiData)
+        }
+    }
 })();
+
+

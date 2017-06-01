@@ -9,11 +9,18 @@
         controller: eventCtrl
     };
 
-    angular
-        .module('yaApp')
-        .component('yaEvent', yaEvent);
 
-    function eventCtrl() {
-        var vm = this;
-    }
+        angular
+            .module('yaApp')
+            .component('yaEvent', yaEvent);
+
+        eventCtrl.$inject = ["usersJson"];
+
+        function eventCtrl(usersJson) {
+            var users = this;
+
+            users.apiData = usersJson.query();
+            console.log(users)
+
+        }
 })();

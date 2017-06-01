@@ -1,0 +1,88 @@
+<br><br><br><br><br><br><br><br>
+<div class="container">
+	<div class="row">
+		<div class="col offset-l3 l6 s12 m6 card">
+			<div class="card-content">
+				<center>
+					<img class="responsive-img" src="/assets/img/yasearmologomorado.png" alt="">
+				</center>
+				<div id="log">
+					<input type="email" id="email" placeholder="Correo">
+					<input type="password" id="pass" placeholder="Contraseña">
+					<center>
+						<a href="/yafriends" id="login" onClick="inicio()" class="waves-effect waves-light btn center purple darken-3">Iniciar Sesión</a>
+						<br><br>
+						<p>¿Aún no eres miembro? Crea una cuenta</p>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+ crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDFhb0lrR4o9Lcfj404QoYJLNtKo6F9BxA",
+		authDomain: "ya-se-armo.firebaseapp.com",
+		databaseURL: "https://ya-se-armo.firebaseio.com",
+		projectId: "ya-se-armo",
+		storageBucket: "ya-se-armo.appspot.com",
+		messagingSenderId: "658236027731"
+	};
+	firebase.initializeApp(config);
+
+</script>
+
+<script>
+	function inicio() {
+		if (firebase.auth().currentUser) {
+			firebase.auth().signOut();
+			console.log('Salió');
+		} else {
+			var email = document.getElementById('email').value;
+			var password = $('#pass').val();
+			if (email.length < 4) {
+				alert('Introduce un correo');
+				return;
+			}
+			if (password.length < 4) {
+				alert('Escribe tu password bien');
+				return;
+			}
+			firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				if (errorCode === 'auth/wrong-password') {
+					alert('Password esta todo mal');
+				} else {
+					alert(errorMessage);
+				}
+			});
+		}
+		console.log('terminé')
+	}
+	// Manejamos los datos del user
+	function initApp() {
+		firebase.auth().onAuthStateChanged(
+			function (user) {
+				if (user) {
+					$('h1').text('Bienvenido\n' + user.email);
+					$('#log').fadeOut();
+				}
+			});
+	}
+	function cerrar() {
+		firebase.auth().signOut();
+		$('#log').fadeIn();
+		$('#logout').fadeOut();
+		console.log('apachurrado');
+		$('h1').text('Vuelve pronto');
+	}
+	window.onload = function () {
+		initApp();
+	}
+</script>

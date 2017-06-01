@@ -2,22 +2,24 @@
 
     <section id="listaamigos" class="col l4 m4">
         <br>
-        <h5 class="center">Agrega a tus amigos.</h5>
-
-        <div>
-            <input ng-model="search.name" placeholder="Busca a tus amigos">
-        </div>
 
         <div id="wrapper">
-            <div class="scrollbar" id="style-7">
-                <div ng-repeat="user in $ctrl.apiData | filter:search" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div draggable="true" ondragstart="drag(event)" id="drag1" class="card-panel card-style grey lighten-5 z-depth-1">
-                        <div class="row valign-wrapper">
-                            <div class="col s4">
-                                <img src="{{user.img}}" alt="amigo02" class="circle  img-card-style">
-                            </div>
-                            <div class="col s10">
-                                <span class="black-text">{{user.name}}</span>
+            <div class="" >
+                <h5 class="center">Agrega a tus amigos.</h5>
+
+                <div>
+                    <input class="input-search-friends" ng-model="search.name" placeholder="Busca a tus amigos">
+                </div>
+                <div class="scrollbar" id="style-7">
+                    <div ng-repeat="user in $ctrl.apiData | filter:search" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div draggable="true" ondragstart="drag(event)" id="drag1" class="card-panel card-style grey lighten-5 z-depth-1">
+                            <div class="row valign-wrapper">
+                                <div class="col s4">
+                                    <img src="{{user.img}}" alt="amigo02" class="circle  img-card-style">
+                                </div>
+                                <div class="col s10">
+                                    <span class="black-text">{{user.name}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -27,22 +29,32 @@
     </section>
 
     <h3 id="idPeda" class="center">¡Título de la peda!!!</h3>
-
-    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="z-depth-3 drag-continer col l7 m8">
-        <div id="listo" class="center">
-            <a class="waves-effect waves-light btn-large purple darken-3">¡Listo!</a>
-        </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" class="z-depth-3 drag-continer col l7 m8 offset-l1" style="padding-top: 40px;
+">
+            <a href="#modal2" class="waves-effect waves-light btn-large purple darken-3 center button-listo-own-styles">¡Listo!</a>
     </div>
 </div>
 
+
+
+
+ <!-- Modal Structure -->
+<div id="modal2" class="modal modal_massagge">
+   <div class="modal-content">
+     <h4>Ya se armó!</h4>
+     <p>La invitación ha sido enviada a tus amigos</p>
+   </div>
+</div>
 
 <script>
     function allowDrop(ev) {
         ev.preventDefault();
     }
+
     function drag(ev) {
         ev.dataTransfer.setData("text", ev.target.id);
     }
+
     function drop(ev) {
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
