@@ -164,6 +164,7 @@ a{
 /*Scroll*/
 
 
+
 .input-search-friends{
     width: 308px !important;
     float: initial;
@@ -175,4 +176,17 @@ a{
     bottom: 20px;
     position: absolute;
     margin: 0px 24% 20px 41%;
+
+.row-event{
+  margin-top: 3%;
+}
+
+#card-row{
+   position: absolute;
+   top: 300px;
+   left: 225px;
+   width: 1000px;
+   z-index: 1000;
+
+
 }
