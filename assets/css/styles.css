@@ -228,6 +228,14 @@ h2{
   float: right;
 }
 
+.circle{
+  width: 170px;
+}
+
+.card-avatar{
+  text-align: center;
+}
+
 #contacto{
   max-height: 564px;
   background-color: #5d006a;
