@@ -17,11 +17,7 @@
         users.apiData = usersJson.query();
         console.log(users)
 
-        function activeController(){
-            $('#modal1').modal().modal('open');
-
-
-        }
+        $('#modal2').modal().modal();
 
 
 
