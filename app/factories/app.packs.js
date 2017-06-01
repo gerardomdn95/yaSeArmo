@@ -3,7 +3,7 @@
 
     angular
         .module('yaApp')
-        .factory("packsApi",packsApi);
+        .factory("packsApi", packsApi);
 
     packsApi.$inject = ["$resource"];
     function starApi($resource){

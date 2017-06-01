@@ -6,23 +6,23 @@
         controller: packsCtrl
     };
 
-    packsCtrl.$inject = ['$location', "usersJson"];
+    // packsCtrl.$inject = ['$location', "usersJson"];
 
-    function packsCtrl($location, usersJson) {
+    // function packsCtrl($location, usersJson) {
 
-        var users = this;
+        // var users = this;
 
-        users.apiData = usersJson.query();
-        console.log(users)
-    }
+        // // users.apiData = usersJson.query();
+        // console.log(users)
+    // }
 
     angular
         .module('yaApp')
         .component('yaPacks', yaPacks);
 })();
 
-/*
-packsCtrl.$inject = ["packsApi"];
+
+packsCtrl.$inject = ['$location', 'usersJson', 'packsApi'];
     function packsCtrl(packsApi) {
         var vm = this;
 
@@ -41,4 +41,3 @@ packsCtrl.$inject = ["packsApi"];
                 });
         }
     }
-*/
