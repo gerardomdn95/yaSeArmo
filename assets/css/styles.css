@@ -231,8 +231,7 @@ h2{
 #contacto{
   max-height: 564px;
   background-color: #5d006a;
-=======
-
+}
 
 .input-search-friends{
     width: 308px !important;
@@ -256,7 +255,4 @@ h2{
    left: 225px;
    width: 1000px;
    z-index: 1000;
-
-
->>>>>>> 77cc72ba2bc3c8e327aa7bf5cbbcc4fb376023b8
 }
