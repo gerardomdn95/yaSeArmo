@@ -20,6 +20,7 @@
         .module('yaApp')
         .component('yaPacks', yaPacks);
 })();
+
 /*
 packsCtrl.$inject = ["packsApi"];
     function packsCtrl(packsApi) {
