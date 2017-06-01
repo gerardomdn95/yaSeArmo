@@ -3,10 +3,10 @@
 
     angular
         .module('yaApp')
-        .factory("packsApi", packsApi);
+        .factory("packsApi",packsApi);
 
     packsApi.$inject = ["$resource"];
     function packsApi($resource){
-        return $resource("https://ya-se-armo-api.herokuapp.com/yaAPI/v1/productos/paquetes/")
+        return $resource("https://ya-se-armo-api.herokuapp.com/yaAPI/v1/eventos/")
     }
 })();
