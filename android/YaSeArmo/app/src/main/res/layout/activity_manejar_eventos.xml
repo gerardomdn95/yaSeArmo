@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.masavi.yasearmo.activities.Eventos.ManejarEventosActivity">
@@ -12,16 +13,19 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="italic"
         android:text="Aquí va el título del conjunto de tarjetas"/>
 
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="80dp">
+        android:layout_marginTop="70dp">
     </FrameLayout>
 
     <LinearLayout
@@ -29,20 +33,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/frame_layout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         >
 
 
         <LinearLayout
-            android:id="@+id/layout_arrow_left"
+            android:id="@+id/evento_img_arrow_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
             android:orientation="vertical">
 
             <ImageView
+                android:src="@drawable/arrow_left_white"
+                android:layout_marginTop="10dp"
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/flecha_izq" />
+                android:layout_height="70dp"
+                />
 
         </LinearLayout>
 
@@ -56,13 +63,15 @@
                 android:id="@+id/btn_manejar_evento_continuar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="continuar"/>
+                android:background="@drawable/custom_button"
+                android:text="elegir"
+                android:textColor="@drawable/custom_button_text_color" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/quiz_img_arrow_right"
+            android:id="@+id/evento_img_arrow_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/frame_layout"
@@ -71,9 +80,11 @@
             android:orientation="vertical">
 
             <ImageView
+                android:src="@drawable/arrow_right_white"
+                android:layout_marginTop="10dp"
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/flecha_der" />
+                android:layout_height="70dp"
+                />
 
         </LinearLayout>
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -30,6 +31,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_main_menu_perfil)
     ImageView imgPerfil;
+
+    @BindView(R.id.tv_main_menu_username)
+    TextView tvNombreUsuario;
 
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
@@ -71,6 +75,7 @@ public class MainMenuActivity extends AppCompatActivity {
                 .build();
 
         Picasso.with(imgPerfil.getContext()).load(mAuth.getCurrentUser().getPhotoUrl()).into(imgPerfil);
+        tvNombreUsuario.setText("¡Bienvenido " + mAuth.getCurrentUser().getDisplayName() + "!");
     }
 
     @OnClick(R.id.btn_main_menu_perfil)
