@@ -15,5 +15,12 @@
 
     function loginCtrl() {
         var vm = this;
+
+        vm.reloader = reloader;
+
+    function reloader(){
+        location.reload();
+        alert("Morro")
+    }
     }
 })();
