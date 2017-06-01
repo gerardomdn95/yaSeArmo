@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict'
 
     var yaPacks = {
@@ -6,24 +6,13 @@
         controller: packsCtrl
     };
 
-    packsCtrl.$inject = ['$location', "usersJson"];
-
-    function packsCtrl($location, usersJson) {
-
-        var users = this;
-
-        users.apiData = usersJson.query();
-        console.log(users)
-    }
-
     angular
         .module('yaApp')
         .component('yaPacks', yaPacks);
-})();
 
-/*
-packsCtrl.$inject = ["packsApi"];
-    function packsCtrl(packsApi) {
+    packsCtrl.$inject = ['$location', 'packsApi'];
+
+    function packsCtrl($location, packsApi) {
         var vm = this;
 
         vm.packs = null;
@@ -32,13 +21,12 @@ packsCtrl.$inject = ["packsApi"];
         vm.$onInit = onInit;
         //vm.otherFun = function(){}
 
-        function onInit(){
-            vm.apiData = packsApi.get({category: vm.category})
-                .$promise
-                .then(function(response){
-                    console.log(response)
-                    vm.packs = response.results
-                });
+        function onInit() {
+
+            vm.apiData = packsApi.query()
+            console.log(vm.apiData)
         }
     }
-*/
+})();
+
+

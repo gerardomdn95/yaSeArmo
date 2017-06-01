@@ -163,6 +163,75 @@ a{
 
 /*Scroll*/
 
+<<<<<<< HEAD
+/*StylesHome*/
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+#home-banner{
+  min-height: 632px;
+  max-height: 564px;
+  position: relative;
+  background-size: cover;
+  background-color: #f4f4f4 !important;
+}
+
+.logomorado{
+  display: block;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  align-content: center;
+}
+
+.text_h2{
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+h2{
+  font-weight: lighter;
+}
+
+.span_h2{
+  font-weight: 300;color: #22007f;
+}
+
+.armaboton{
+  background-color: #6affd3 !important;
+  color: black;
+  line-height: 66px;
+  border-radius: 35px;
+  width: 300px;
+  height: 70px;
+  margin: 20px auto;
+  display: inherit;
+}
+
+#pide{
+  min-height: 432px;
+  max-height: 564px;
+  position: relative;
+  background-size: cover;
+  background-color: #f4f4f4 !important;
+}
+
+.parallax-container{
+  height: 300px;
+}
+
+.descarga{
+  width: 500px;
+  float: right;
+}
+
+#contacto{
+  max-height: 564px;
+  background-color: #5d006a;
+=======
 
 
 .input-search-friends{
@@ -189,4 +258,5 @@ a{
    z-index: 1000;
 
 
+>>>>>>> 77cc72ba2bc3c8e327aa7bf5cbbcc4fb376023b8
 }
