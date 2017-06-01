@@ -17,6 +17,11 @@ nav{
   margin-left: 20px;
 }
 
+#packImg{
+  width: 100px;
+  height: 100px;
+}
+
 #mobile-demo{
   margin-top: 10px;
 }

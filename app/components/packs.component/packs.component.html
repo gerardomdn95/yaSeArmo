@@ -20,7 +20,10 @@
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Saca el pack y la categoría<i class="material-icons right">close</i></span>
                 <p>Servicios disponibles:</p><br>
-                <p>{{pack.productos[1].nombre.imagen}}</p>
+                <p>{{pack.productos.nombre}}</p>
+                <img src="{{pack.productos[1].imagen}}" id="packImg">
+                <p>{{pack.productos[1].descripcion}}</p>
+
 
                 <div ng-repeat="user in $ctrl.apiData">
                     <p>{{user.name}}</p>
