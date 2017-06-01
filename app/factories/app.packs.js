@@ -6,7 +6,7 @@
         .factory("packsApi", packsApi);
 
     packsApi.$inject = ["$resource"];
-    function starApi($resource){
+    function packsApi($resource){
         return $resource("https://ya-se-armo-api.herokuapp.com/yaAPI/v1/productos/paquetes/")
     }
 })();
