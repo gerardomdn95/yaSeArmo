@@ -1,4 +1,3 @@
-
 <div class="row row-event">
   <div class="row">
     <div class="col m6 l6 offset-l6"><img class="responsive-img" src="./assets/img/eventosLetras.png" alt=""></div>
@@ -7,11 +6,14 @@
     <div class="card" style="background: -webkit-linear-gradient(left, #5d006a, #22007f)">
       <div class="card-image">
         <img src="https://mifiestapr.files.wordpress.com/2014/06/cropped-cropped-navidad-fiesta.png" class="responsive-img circle">
-        <a class="btn-floating halfway-fab waves-effect waves-lighten-5"><i class="material-icons">add</i></a>
       </div>
       <div class="card-content">
+        <br>
         <span class="card-title event-titulo" style="color: #ffffff">{{$ctrl.apiData[3].nombre}}</span>
         <p style="color:#ffffff">{{$ctrl.apiData[3].ubicacion}}</p>
+        <br>
+        <p style="color:#ffffff">Fecha:</p>
+        <p style="color:#ffffff">{{$ctrl.apiData[3].fecha}}</p>
       </div>
     </div>
   </div>
@@ -53,33 +55,16 @@
     <h5>Servicios</h5>
     <div class="divider"></div>
 
-    <!--<div class="col m2 l2" ng-repeat="user in $ctrl.apiData">
-      <div class="card sticky-action">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-    </div>-->
-
     <div class="col m2 l2">
       <div class="card sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
+          <img class="activator" src="https://www.comedera.com/wp-content/uploads/2013/07/alitas-de-pollo-al-horno.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{$ctrl.apiData[1].nombre}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">{{$ctrl.apiData[1].encuesta.opciones[0]}}</a></p>
+          <span class="card-title activator grey-text text-darken-4">{{$ctrl.apiData[1].encuesta.opciones[0]}}<i class="material-icons right">more_vert</i></span>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <span class="card-title grey-text text-darken-4">{{$ctrl.apiData[1].encuesta.opciones[0]}}<i class="material-icons right">close</i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
@@ -88,14 +73,13 @@
     <div class="col m2 l2">
       <div class="card sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
+          <img class="activator" src="https://mejorconsalud.com/wp-content/uploads/2015/07/Copa-de-vino-500x350.png">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
+          <span class="card-title activator grey-text text-darken-4">{{$ctrl.apiData[1].encuesta.opciones[1]}}<i class="material-icons right">more_vert</i></span>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <span class="card-title grey-text text-darken-4">{{$ctrl.apiData[1].encuesta.opciones[1]}}<i class="material-icons right">close</i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
@@ -104,14 +88,13 @@
     <div class="col m2 l2">
       <div class="card sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
+          <img class="activator" src="http://loff.it/wp-content/uploads/2015/04/loffit-absolut-vodka-estrena-botella-06.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
+          <span class="card-title activator grey-text text-darken-4">Vodka<i class="material-icons right">more_vert</i></span>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <span class="card-title grey-text text-darken-4">Vodka<i class="material-icons right">close</i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
@@ -120,50 +103,22 @@
     <div class="col m2 l2">
       <div class="card sticky-action">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
+          <img class="activator" src="https://eatpizzafresca.com/images/pepperoni_pizza.jpg?crc=4023861219">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
+          <span class="card-title activator grey-text text-darken-4">{{$ctrl.apiData[1].encuesta.opciones[3]}}<i class="material-icons right">more_vert</i></span>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <span class="card-title grey-text text-darken-4">{{$ctrl.apiData[1].encuesta.opciones[3]}}<i class="material-icons right">close</i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
     </div>
-
-    <div class="col m2 l2">
-      <div class="card sticky-action">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col m2 l2">
-      <div class="card sticky-action">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="http://www.mientrastantoenmexico.mx/wp-content/uploads/2016/03/BsCSP.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{user.name}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
+<br>
+<br>
+<br>  
+<center>
+  <a href="#!/" class="waves-effect waves-light btn center purple darken-3">¡Ya se armó!</a>
+</center>
