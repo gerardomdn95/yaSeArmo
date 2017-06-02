@@ -20,10 +20,15 @@
         </activity>
         <activity android:name=".activities.PerfilActivity" />
         <activity android:name=".activities.MainMenuActivity" />
-        <activity android:name=".activities.Armala.ArmalaActivity" />
-        <activity android:name=".activities.Armala.ManejarArmalaActivity" />
-        <activity android:name=".activities.Paquetes.PaquetesActivity"
-                  android:theme="@style/AppTheme.NoTitle"/>
+        <activity
+            android:name=".activities.Armala.ArmalaActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Armala.ManejarArmalaActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Paquetes.PaquetesActivity"
+            android:theme="@style/AppTheme.NoTitle" />
         <activity
             android:name=".activities.Eventos.ManejarEventosActivity"
             android:theme="@style/AppTheme.NoTitle" />
@@ -34,8 +39,9 @@
         <activity
             android:name=".activities.Eventos.EventosActivity"
             android:theme="@style/AppTheme.NoTitle" />
-        <activity android:name=".activities.Pedidos.PedidosActivity"
-                  android:theme="@style/AppTheme.NoTitle"/>
+        <activity
+            android:name=".activities.Pedidos.PedidosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
         <activity android:name=".activities.Productos.ProductosActivity" />
         <activity
             android:name=".activities.Productos.DetalleProductoActivity"
@@ -43,8 +49,13 @@
         <activity
             android:name=".activities.Eventos.DetalleEventosActivity"
             android:theme="@style/AppTheme.NoTitle" />
-        <activity android:name=".activities.Carrito.CarritoActivity"
-                  android:theme="@style/AppTheme.NoTitle"></activity>
+        <activity
+            android:name=".activities.Carrito.CarritoActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Armala.ConsultarInvitacionesActivity"
+                  android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Armala.ConsultarHistorialActivity"
+                  android:theme="@style/AppTheme.NoTitle" ></activity>
     </application>
 
 </manifest>

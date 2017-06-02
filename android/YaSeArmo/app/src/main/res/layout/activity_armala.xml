@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.masavi.yasearmo.activities.Armala.ArmalaActivity">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:fillViewport="true">
 
     <LinearLayout
-        android:background="@color/colorAccent"
-        android:orientation="horizontal"
+        android:background="@drawable/backrepeat"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <!-- Descripción inicial del evento -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Nombre del Evento"/>
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="Des-Graduación Batch-14"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:src="@mipmap/ic_launcher"
-                android:id="@+id/btn_perfil"
+                android:id="@+id/armala_img_perfil"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_width="96dp"
@@ -46,48 +47,353 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:textSize="14dp"
+                android:text="Evento organizado por"/>
+
+            <TextView
+                android:id="@+id/armala_tv_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
                 android:text="Nombre Apellido"/>
 
         </LinearLayout>
 
+        <!-- Descripción del Evento -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_fiesta_description"
+            <android.support.v7.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="@string/text_dummy"/>
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="6dp" >
+
+                <TextView
+                    android:id="@+id/tv_fiesta_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:textSize="14dp"
+                    android:text="@string/armala_descripcion"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Ubicación del Evento"/>
+
+        </LinearLayout>
+
+        <!-- Google Maps -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="6dp">
+
+                <ImageView
+                    android:src="@drawable/gmaps"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Invitados -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Invitados"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/gerardo"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Gerardo Medina"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/yair"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Yaír Colín"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/nelly"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:text="Nelly Desu"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/ken2"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Ken Márquez"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/diego"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Diego Barriga"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:src="@drawable/mora2"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="1dp" />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:text="Salvador Mora"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@drawable/custom_button_text_color"
+                    android:text="Invitar Amigos"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Encuestas -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Encuestas"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="6dp" >
+
+                <ImageView
+                    android:src="@drawable/encuesta"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp" />
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_button"
+                android:textColor="@drawable/custom_button_text_color"
+                android:text="Crear Encuesta"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="¿Estás listo para armarla?"/>
+
+            <Button
+                android:id="@+id/armala_btn_crear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_button"
+                android:textColor="@drawable/custom_button_text_color"
+                android:text="Crear Evento"/>
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:background="@color/cardview_dark_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <ImageView
-            android:background="@color/colorAccent"
-            android:layout_gravity="center"
-            android:layout_width="250dp"
-            android:layout_height="100dp"
-            android:layout_margin="70dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

@@ -16,6 +16,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.masavi.yasearmo.R;
+import com.masavi.yasearmo.activities.Armala.ManejarArmalaActivity;
 import com.masavi.yasearmo.activities.Eventos.ManejarEventosActivity;
 import com.masavi.yasearmo.activities.Armala.ArmalaActivity;
 import com.masavi.yasearmo.activities.Login.LoginActivity;
@@ -89,7 +90,7 @@ public class MainMenuActivity extends AppCompatActivity {
     @OnClick(R.id.btn_armala)
     public void onClickArmala(View view) {
         view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
-        startActivity(new Intent(MainMenuActivity.this, ArmalaActivity.class));
+        startActivity(new Intent(MainMenuActivity.this, ManejarArmalaActivity.class));
     }
 
     @OnClick(R.id.btn_eventos)

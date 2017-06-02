@@ -43,8 +43,18 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textStyle="italic"
-            android:text="Tu historial de pedidos está vacío :("/>
+            android:text="Tu historial de pedidos está vacío"/>
 
     </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_pedidos_ver_productos"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@drawable/custom_button_text_color"
+        android:text="ver todos los productos"/>
 
 </LinearLayout>
