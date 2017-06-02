@@ -1,0 +1,31 @@
+<section class="spotify-component">
+    <div class="search">
+        <form ng-submit="$ctrl.search()">
+            <input type="text" ng-model="$ctrl.song_name" placeholder="SEARCH">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="player">
+        <div class="playing">
+
+            <div class="info" ng-if="!$ctrl.audio.paused">
+                <h3>{{$ctrl.song.name}}</h3>
+                <h4>{{$ctrl.song.duration_ms | toSeconds}}</h4>
+            </div>
+                <div class="controls">
+                    <a ng-click="$ctrl.playing()">&#9654;</a>
+                    <a ng-click="$ctrl.pause()">&#9208;</a>
+                </div>
+        </div>
+    </div>
+    <div class="searchlist" ng-if="$ctrl.searchlist">
+        <div class="songs">
+            <a ng-click="$ctrl.play(song)"
+               ng-repeat="song in $ctrl.searchlist"
+               class="song">
+                <h3 class="song-name">{{song.name}}</h3>
+                <span>{{song.artists[0].name}}  &bull;  {{song.album.name }}</span>
+            </a>
+        </div>
+    </div>
+</section>

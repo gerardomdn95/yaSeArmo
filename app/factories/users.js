@@ -3,10 +3,10 @@
 
     angular
         .module('yaApp')
-        .factory("usersJson", usersJson);
+        .factory("users", users);
 
-    usersJson.$inject = ["$resource"];
-    function usersJson($resource){
-        return $resource("../server/users.json")
+    users.$inject = ["$resource"];
+    function users($resource){
+        return $resource("https://ya-se-armo-api.herokuapp.com/yaAPI/v1/eventos/invitados")
     }
 })();
