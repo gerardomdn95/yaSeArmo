@@ -29,7 +29,7 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/profilepic"
                 android:id="@+id/btn_main_menu_perfil"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
@@ -47,8 +47,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:textStyle="normal"
-                android:text="¡Bienvenido tunombreaquí!"/>
+                android:textColor="@color/black"
+                android:text="¡Bienvenido Mauricio Saavedra!"/>
 
 
         </LinearLayout>

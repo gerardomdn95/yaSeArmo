@@ -16,11 +16,13 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.masavi.yasearmo.R;
+import com.masavi.yasearmo.activities.Carrito.CarritoActivity;
 import com.masavi.yasearmo.activities.Login.LoginActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class PerfilActivity extends AppCompatActivity {
 
@@ -89,8 +91,15 @@ public class PerfilActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
+    protected void onStart()
+    {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @OnClick(R.id.btn_perfil_carrito)
+    public void onClickCarrito(View view)
+    {
+        startActivity(new Intent(PerfilActivity.this, CarritoActivity.class));
     }
 }

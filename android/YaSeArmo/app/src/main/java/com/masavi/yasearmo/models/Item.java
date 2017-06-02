@@ -6,6 +6,7 @@ package com.masavi.yasearmo.models;
 
 public class Item {
 
+    private int id;
     private String nombre;
     private String url;
     private String descripcion;
@@ -22,6 +23,20 @@ public class Item {
         this.descripcion = descripcion;
         this.categoria = categoria;
         this.rating = rating;
+    }
+
+    public Item(int id, String nombre, String url) {
+        this.id = id;
+        this.nombre = nombre;
+        this.url = url;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -67,7 +82,8 @@ public class Item {
     @Override
     public String toString() {
         return "Item{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", url='" + url + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", categoria='" + categoria + '\'' +

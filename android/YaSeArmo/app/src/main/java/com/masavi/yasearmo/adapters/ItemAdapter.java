@@ -2,6 +2,7 @@ package com.masavi.yasearmo.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.masavi.yasearmo.R;
 import com.masavi.yasearmo.activities.Productos.DetalleProductoActivity;
 import com.masavi.yasearmo.models.Item;
+import com.masavi.yasearmo.util.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -41,7 +43,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
                 .inflate(R.layout.item_producto, parent, false);
 
         ItemViewHolder viewHolder = new ItemViewHolder(view);
-
         return viewHolder;
     }
 
@@ -73,6 +74,25 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         @BindView(R.id.item_producto_descripcion)
         TextView tvDescProducto;
 
+        @BindView(R.id.item_producto_star_1)
+        ImageView imgEstrella1;
+
+        @BindView(R.id.item_producto_star_2)
+        ImageView imgEstrella2;
+
+        @BindView(R.id.item_producto_star_3)
+        ImageView imgEstrella3;
+
+        @BindView(R.id.item_producto_star_4)
+        ImageView imgEstrella4;
+
+        @BindView(R.id.item_producto_star_5)
+        ImageView imgEstrella5;
+
+        private String imagenUrl;
+        private String titulo;
+        private String descripcion;
+        private int rating;
         private int id;
 
         private View rootView;
@@ -92,11 +112,54 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             tvTituloProducto.setText(item.getNombre());
             tvDescProducto.setText(item.getDescripcion());
 
+            // Guardamos los datos para mandar al siguiente intent
+            imagenUrl = item.getUrl();
+            titulo = item.getNombre();
+            descripcion = item.getDescripcion();
+            rating = (int) item.getRating();
+
+            switch ((int) item.getRating())
+            {
+                case 1:
+                    Picasso.with(imgEstrella1.getContext()).load(Constants.ESTRELLA).into(imgEstrella1);
+                    break;
+
+                case 2:
+                    Picasso.with(imgEstrella1.getContext()).load(Constants.ESTRELLA).into(imgEstrella1);
+                    Picasso.with(imgEstrella2.getContext()).load(Constants.ESTRELLA).into(imgEstrella2);
+                    break;
+
+                case 3:
+                    Picasso.with(imgEstrella1.getContext()).load(Constants.ESTRELLA).into(imgEstrella1);
+                    Picasso.with(imgEstrella2.getContext()).load(Constants.ESTRELLA).into(imgEstrella2);
+                    Picasso.with(imgEstrella3.getContext()).load(Constants.ESTRELLA).into(imgEstrella3);
+                    break;
+
+                case 4:
+                    Picasso.with(imgEstrella1.getContext()).load(Constants.ESTRELLA).into(imgEstrella1);
+                    Picasso.with(imgEstrella2.getContext()).load(Constants.ESTRELLA).into(imgEstrella2);
+                    Picasso.with(imgEstrella3.getContext()).load(Constants.ESTRELLA).into(imgEstrella3);
+                    Picasso.with(imgEstrella4.getContext()).load(Constants.ESTRELLA).into(imgEstrella4);
+                    break;
+
+                case 5:
+                    Picasso.with(imgEstrella1.getContext()).load(Constants.ESTRELLA).into(imgEstrella1);
+                    Picasso.with(imgEstrella2.getContext()).load(Constants.ESTRELLA).into(imgEstrella2);
+                    Picasso.with(imgEstrella3.getContext()).load(Constants.ESTRELLA).into(imgEstrella3);
+                    Picasso.with(imgEstrella4.getContext()).load(Constants.ESTRELLA).into(imgEstrella4);
+                    Picasso.with(imgEstrella5.getContext()).load(Constants.ESTRELLA).into(imgEstrella5);
+                    break;
+            }
+
             rootView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
                     Intent intent = new Intent(v.getContext(), DetalleProductoActivity.class);
+                    intent.putExtra(Constants.PRODUCTO_IMAGEN, imagenUrl);
+                    intent.putExtra(Constants.PRODUCTO_TITULO, titulo);
+                    intent.putExtra(Constants.PRODUCTO_DESCRIPCION, descripcion);
+                    intent.putExtra(Constants.PRODUCTO_RATING, rating);
                     v.getContext().startActivity(intent);
                 }
             });

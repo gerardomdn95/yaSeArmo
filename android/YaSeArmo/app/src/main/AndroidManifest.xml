@@ -30,10 +30,19 @@
         <activity
             android:name=".activities.Login.CrearCuentaActivity"
             android:theme="@style/AppTheme.NoTitle" />
-        <activity android:name=".activities.Eventos.EventosActivity" />
+        <activity
+            android:name=".activities.Eventos.EventosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
         <activity android:name=".activities.Pedidos.PedidosActivity" />
         <activity android:name=".activities.Productos.ProductosActivity" />
-        <activity android:name=".activities.Productos.DetalleProductoActivity"></activity>
+        <activity
+            android:name=".activities.Productos.DetalleProductoActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Eventos.DetalleEventosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Carrito.CarritoActivity"
+                  android:theme="@style/AppTheme.NoTitle"></activity>
     </application>
 
 </manifest>

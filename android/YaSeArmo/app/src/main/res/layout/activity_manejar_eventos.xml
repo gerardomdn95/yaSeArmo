@@ -63,8 +63,8 @@
                 android:id="@+id/btn_manejar_evento_continuar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Elegir"
                 android:background="@drawable/custom_button"
-                android:text="elegir"
                 android:textColor="@drawable/custom_button_text_color" />
 
 

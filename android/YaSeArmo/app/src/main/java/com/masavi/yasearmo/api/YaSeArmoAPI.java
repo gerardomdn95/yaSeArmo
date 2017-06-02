@@ -1,5 +1,6 @@
 package com.masavi.yasearmo.api;
 
+import com.masavi.yasearmo.models.Paquete;
 import com.masavi.yasearmo.models.Producto;
 import com.masavi.yasearmo.util.NetworkConstants;
 
@@ -17,6 +18,9 @@ import retrofit2.http.Query;
 public interface YaSeArmoAPI
 {
     @GET(NetworkConstants.PATH_SEARCH_PRODUCTOS)
-    public Call<List<Producto>> buscarEventos();
+    public Call<List<Producto>> obtenerProductos();
+
+    @GET(NetworkConstants.PATH_SEARCH_PAQUETES)
+    public Call<List<Paquete>> obtenerPaquetes();
 
 }

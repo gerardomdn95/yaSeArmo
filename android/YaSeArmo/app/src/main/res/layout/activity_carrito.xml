@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.masavi.yasearmo.activities.Carrito.CarritoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        android:text="Tu carrito de compras"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="8"
+        android:weightSum="1">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="6dp"
+            android:layout_weight="0.27">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_height="100dp"
+                    android:layout_width="60dp"
+                    android:layout_weight="1"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/item_producto_img"
+                        android:src="@drawable/dummy"
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:layout_marginLeft="6dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#FF000000"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:id="@+id/item_producto_titulo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cerveza Negra Modelo"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/item_producto_descripcion"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:text="12 Cervezas de la marca Negra Modelo de 355ml"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="5dp">
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_gravity="center"
+                        android:text="remover"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="6dp"
+            android:layout_weight="0.14">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_height="100dp"
+                    android:layout_width="60dp"
+                    android:layout_weight="1"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:src="@drawable/hqdefault"
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:layout_marginLeft="6dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#FF000000"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bocina Harman Kardo"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Bocina de 50 Watts ideal para reuniones"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="5dp">
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_gravity="center"
+                        android:text="remover"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="6dp"
+            android:layout_weight="0.03">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_height="100dp"
+                    android:layout_width="60dp"
+                    android:layout_weight="1"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:src="@drawable/pizzaboy"
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:layout_marginLeft="6dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#FF000000"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="2">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pizza Pepperoni"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Pizza tradicional grande de pepperoni"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="5dp">
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_height="fill_parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_gravity="center"
+                        android:text="remover"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@drawable/custom_button_text_color"
+            android:text="pagar"
+            />
+
+        <Button
+            android:id="@+id/carrito_btn_main_menu"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@drawable/custom_button_text_color"
+            android:text="regresar al menú principal"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

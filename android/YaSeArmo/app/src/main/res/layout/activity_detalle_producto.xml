@@ -1,9 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.masavi.yasearmo.activities.Productos.DetalleProductoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_height="100dp"
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/detalle_producto_img"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_gravity="center"
+                    android:layout_width="80dp"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="6dp"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#FF000000"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="5">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:id="@+id/detalle_producto_titulo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del producto"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/detalle_producto_descripcion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Aquí va todo ese choro mareador locochón"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/detalle_producto_star_1"
+                            android:layout_width="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:id="@+id/detalle_producto_star_2"
+                            android:layout_width="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:id="@+id/detalle_producto_star_3"
+                            android:layout_width="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:id="@+id/detalle_producto_star_4"
+                            android:layout_width="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:id="@+id/detalle_producto_star_5"
+                            android:layout_width="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="fill_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="italic"
+        android:textSize="14dp"
+        android:text="Lo que otros usuarios piensan de este producto"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_weight="1"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/diego"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="6dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="5">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Diego Barriga"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp">
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="¡Me puse bien pedo! ¡Amigos este producto es lo mejor!"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_weight="1"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/nelly"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="6dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="5">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nelly Desu"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp">
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="2dp"
+                    android:text="Esperaba algo mucho mejor... completa desilusión"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="100dp"
+            android:layout_width="60dp"
+            android:layout_weight="1"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/yair"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="6dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="5">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yaír Colín"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp">
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:src="@drawable/star"
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_height="fill_parent" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="El producto me pareció un poco caro, pero fuera de eso obtuve lo que esperaba"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/detalle_producto_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@drawable/custom_button_text_color"
+        android:text="Agregar al carrito"/>
+
+
+</LinearLayout>

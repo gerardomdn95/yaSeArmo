@@ -15,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "658236027731-sukmjkmes21u42jlub5dam5ucfvtflu9.apps.googleusercontent.com",
+          "client_id": "658236027731-1m1a28pkre4palt64ktgktgcf2o59qt7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.masavi.yasearmo",
+            "certificate_hash": "5b66318460e1603e82185a8a7f239567ce5e8af4"
+          }
+        },
+        {
+          "client_id": "658236027731-6kdk8hs52k6mrj6613rr3h4qtv74koje.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.masavi.yasearmo",

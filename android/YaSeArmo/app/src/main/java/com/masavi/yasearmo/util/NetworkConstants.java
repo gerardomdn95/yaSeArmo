@@ -8,6 +8,7 @@ public class NetworkConstants {
 
     public static final String BASE_URL = "https://ya-se-armo-api.herokuapp.com";
     public static final String PATH_SEARCH_PRODUCTOS = "/yaAPI/v1/productos";
+    public static final String PATH_SEARCH_PAQUETES  = "/yaAPI/v1/productos/paquetes";
 
 
 }
