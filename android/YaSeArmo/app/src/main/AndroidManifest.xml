@@ -22,7 +22,8 @@
         <activity android:name=".activities.MainMenuActivity" />
         <activity android:name=".activities.Armala.ArmalaActivity" />
         <activity android:name=".activities.Armala.ManejarArmalaActivity" />
-        <activity android:name=".activities.Paquetes.PaquetesActivity" />
+        <activity android:name=".activities.Paquetes.PaquetesActivity"
+                  android:theme="@style/AppTheme.NoTitle"/>
         <activity
             android:name=".activities.Eventos.ManejarEventosActivity"
             android:theme="@style/AppTheme.NoTitle" />

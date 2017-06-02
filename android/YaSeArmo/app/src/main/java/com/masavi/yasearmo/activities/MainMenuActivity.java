@@ -104,12 +104,6 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(new Intent(MainMenuActivity.this, PaquetesActivity.class));
     }
 
-/*    @OnClick(R.id.btn_pedidos)
-    public void onClickServicios(View view){
-        view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
-        startActivity(new Intent(MainMenuActivity.this, ManejarPedidosActivity.class));
-    }*/
-
     @OnClick(R.id.btn_pedidos)
     public void onClickServicios(View view){
         view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
