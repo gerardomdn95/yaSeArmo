@@ -14,8 +14,11 @@
 
         var self = this;
 
+        self.$onInit = function () {
+            self.friends = users.query()
+        }
 
-        self.friends = users.query()
+
         console.log(self.friends)
 
         $('#modal2').modal().modal();
