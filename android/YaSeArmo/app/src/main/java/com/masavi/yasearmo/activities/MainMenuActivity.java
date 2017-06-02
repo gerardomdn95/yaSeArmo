@@ -21,6 +21,7 @@ import com.masavi.yasearmo.activities.Armala.ArmalaActivity;
 import com.masavi.yasearmo.activities.Login.LoginActivity;
 import com.masavi.yasearmo.activities.Paquetes.PaquetesActivity;
 import com.masavi.yasearmo.activities.Pedidos.ManejarPedidosActivity;
+import com.masavi.yasearmo.activities.Productos.ProductosActivity;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -102,10 +103,16 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(new Intent(MainMenuActivity.this, PaquetesActivity.class));
     }
 
-    @OnClick(R.id.btn_pedidos)
+/*    @OnClick(R.id.btn_pedidos)
     public void onClickServicios(View view){
         view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
         startActivity(new Intent(MainMenuActivity.this, ManejarPedidosActivity.class));
+    }*/
+
+    @OnClick(R.id.btn_pedidos)
+    public void onClickServicios(View view){
+        view.startAnimation(AnimationUtils.loadAnimation(view.getContext(), R.anim.image_click));
+        startActivity(new Intent(MainMenuActivity.this, ProductosActivity.class));
     }
 
 }

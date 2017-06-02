@@ -23,13 +23,17 @@
         <activity android:name=".activities.Armala.ArmalaActivity" />
         <activity android:name=".activities.Armala.ManejarArmalaActivity" />
         <activity android:name=".activities.Paquetes.PaquetesActivity" />
-        <activity android:name=".activities.Eventos.ManejarEventosActivity"
-                  android:theme="@style/AppTheme.NoTitle"/>
+        <activity
+            android:name=".activities.Eventos.ManejarEventosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
         <activity android:name=".activities.Pedidos.ManejarPedidosActivity" />
         <activity
             android:name=".activities.Login.CrearCuentaActivity"
             android:theme="@style/AppTheme.NoTitle" />
-        <activity android:name=".activities.Eventos.EventosActivity"></activity>
+        <activity android:name=".activities.Eventos.EventosActivity" />
+        <activity android:name=".activities.Pedidos.PedidosActivity" />
+        <activity android:name=".activities.Productos.ProductosActivity" />
+        <activity android:name=".activities.Productos.DetalleProductoActivity"></activity>
     </application>
 
 </manifest>

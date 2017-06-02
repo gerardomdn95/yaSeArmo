@@ -1,27 +1,46 @@
 package com.masavi.yasearmo.models;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
- * Created by Masavi on 31/5/2017.
+ * Created by Masavi on 1/6/2017.
  */
 
-public class Item {
+public class Producto
+{
+    @SerializedName("id")
+    private int id;
 
+    @SerializedName("nombre")
     private String nombre;
-    private String url;
+
+    @SerializedName("imagen")
+    private String imagen;
+
+    @SerializedName("descripcion")
     private String descripcion;
+
+    @SerializedName("categoria")
     private String categoria;
-    private int rating;
 
-    public Item(){
+    @SerializedName("rating")
+    private float rating;
 
-    }
-
-    public Item(String nombre, String url, String descripcion, String categoria, int rating) {
+    public Producto(int id, String nombre, String imagen, String descripcion, String categoria, float rating) {
+        this.id = id;
         this.nombre = nombre;
-        this.url = url;
+        this.imagen = imagen;
         this.descripcion = descripcion;
         this.categoria = categoria;
         this.rating = rating;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -32,12 +51,12 @@ public class Item {
         this.nombre = nombre;
     }
 
-    public String getUrl() {
-        return url;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public String getDescripcion() {
@@ -60,15 +79,16 @@ public class Item {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 
     @Override
     public String toString() {
-        return "Item{" +
-                "nombre='" + nombre + '\'' +
-                ", url='" + url + '\'' +
+        return "Producto{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", imagen='" + imagen + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", rating=" + rating +
