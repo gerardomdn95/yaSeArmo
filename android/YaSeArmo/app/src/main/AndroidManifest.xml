@@ -33,7 +33,8 @@
         <activity
             android:name=".activities.Eventos.EventosActivity"
             android:theme="@style/AppTheme.NoTitle" />
-        <activity android:name=".activities.Pedidos.PedidosActivity" />
+        <activity android:name=".activities.Pedidos.PedidosActivity"
+                  android:theme="@style/AppTheme.NoTitle"/>
         <activity android:name=".activities.Productos.ProductosActivity" />
         <activity
             android:name=".activities.Productos.DetalleProductoActivity"
