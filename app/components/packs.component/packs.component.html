@@ -9,30 +9,33 @@
 
         <div class="card col l6 m6 s12" ng-repeat="pack in $ctrl.apiData">
 
-            <div class="card-image waves-effect waves-block waves-light">
+            <div class="card-image waves-effect waves-block waves-light small">
                 <img class="activator" src="{{pack.imagen}}">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{pack.nombre}}<i class="material-icons right">more_vert</i></span>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Saca el pack y la categoría<i class="material-icons right">close</i></span>
-                <p>Servicios disponibles:</p><br>
-                <p>{{pack.productos[0].nombre}}</p>
-                <img src="{{pack.productos[0].imagen}}" id="packImg">
-                <p>{{pack.productos[0].descripcion}}</p>
-                <p>{{pack.productos[1].nombre}}</p>
-                <img src="{{pack.productos[1].imagen}}" id="packImg">
-                <p>{{pack.productos[1].descripcion}}</p>
-                <p>{{pack.productos[2].nombre}}</p>
-                <img src="{{pack.productos[2].imagen}}" id="packImg">
-                <p>{{pack.productos[2].descripcion}}</p>
-                <p>{{pack.productos[3].nombre}}</p>
-                <img src="{{pack.productos[3].imagen}}" id="packImg">
+                <span class="card-title grey-text text-darken-4"><h5>Servicios disponibles:</h5><i class="material-icons right">close</i></span>
+
+                  <b>{{pack.productos[0].nombre}}</b><br>
+                  <img class="right-align" src="{{pack.productos[0].imagen}}" id="packImg">
+                  <p>{{pack.productos[0].descripcion}}</p>
+                  <div class="divider"></div>
+                  <b>{{pack.productos[1].nombre}}</b><br>
+                  <img class="right-align"src="{{pack.productos[1].imagen}}" id="packImg">
+                  <p>{{pack.productos[1].descripcion}}</p>
+                  <div class="divider"></div>
+                  <b>{{pack.productos[2].nombre}}</b><br>
+                  <img class="right-align" src="{{pack.productos[2].imagen}}" id="packImg">
+                  <p>{{pack.productos[2].descripcion}}</p>
+                  <div class="divider"></div><br>
+                  <!-- <p>{{pack.productos[3].nombre}}</p> -->
+                <!-- <img src="{{pack.productos[3].imagen}}" id="packImg">
                 <p>{{pack.productos[3].descripcion}}</p>
                 <p>{{pack.productos[4].nombre}}</p>
                 <img src="{{pack.productos[4].imagen}}" id="packImg">
-                <p>{{pack.productos[4].descripcion}}</p>
+                <p>{{pack.productos[4].descripcion}}</p> -->
 
 
 
