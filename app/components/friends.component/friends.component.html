@@ -11,16 +11,19 @@
                     <input class="input-search-friends" ng-model="search.name" placeholder="Busca a tus amigos">
                 </div>
                 <div class="scrollbar" id="style-7">
-                    <div ng-repeat="user in $ctrl.apiData | filter:search" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <div draggable="true" ondragstart="drag(event)" id="drag1" class="card-panel card-style grey lighten-5 z-depth-1">
-                            <div class="row valign-wrapper">
-                                <div class="col s4">
-                                    <img src="{{user.img}}" alt="amigo02" class="circle  img-card-style">
-                                </div>
-                                <div class="col s10">
-                                    <span class="black-text">{{user.name}}</span>
-                                </div>
+                    <div ng-repeat="user in $ctrl.friends | filter:search" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div draggable="true" ondragstart="drag(event)" id="drag1" class="friend">
+
+                            <div class="friend__card">
+                              <div class="friend__photo">
+                                <img class="photo" src="{{user.imagen}}" alt="">
+                              </div>
+                              <div class="friend__info">
+                                <h1 class="friend__name">{{user.user.username}}</h1>
+                                <span class="friend__email">{{user.user.email}}</span>
+                              </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

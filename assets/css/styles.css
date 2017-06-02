@@ -160,15 +160,12 @@ a{
 #style-7::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	background-image: -webkit-gradient(linear,
-									   left bottom,
-									   left top,
-									   color-stop(0.44, #5d006a));
+	background-image: linear-gradient(linear, left bottom,left top,color-stop(0.44, #5d006a));
 }
 
 /*Scroll*/
 
-<<<<<<< HEAD
+<
 /*StylesHome*/
 
 body{
@@ -217,7 +214,7 @@ h2{
 }
 
 #pide{
-  min-height: 432px;
+  min-height: 402px;
   max-height: 564px;
   position: relative;
   background-size: cover;
@@ -252,7 +249,6 @@ h2{
     margin-right: 40px !important;
 }
 
-
 .button-listo-own-styles{
     bottom: 20px;
     position: absolute;
@@ -268,4 +264,49 @@ h2{
    left: 225px;
    width: 1000px;
    z-index: 1000;
+}
+
+/* Friends card */
+.friend {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.friend__card {
+
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.friend__photo {
+  height: 100px;
+  width: 100px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+.friend__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend__name{
+  font-size: 2rem;
+  margin: 0;
+  text-transform: capitalize;
 }

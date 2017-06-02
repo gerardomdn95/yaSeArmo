@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  font-family: sans-serif; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: inherit; }
+
+body {
+  background: #193441; }
+
+.spotify-component {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "search" "controls" "searchlist";
+  grid-gap: 1rem; }
+
+.search {
+  grid-area: search; }
+  .search form {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .search input, .search button {
+    width: 100vw; }
+  .search input {
+    outline: none;
+    color: #91AA9D;
+    padding: .5rem 1rem; }
+  .search button {
+    padding: .5rem;
+    border: none;
+    background-color: #3E606F;
+    color: #FCFFF5;
+    text-transform: uppercase; }
+
+.searchlist {
+  grid-area: searchlist; }
+  .searchlist .songs {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .searchlist .songs a {
+      padding: 1rem 1rem;
+      width: 100vw;
+      color: #D1DBBD;
+      text-transform: capitalize;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #D1DBBD; }
+    .searchlist .songs span {
+      display: block;
+      font-size: .8rem; }
+
+.player {
+  grid-area: controls;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .player a {
+    color: #FCFFF5;
+    decorator: none;
+    font-size: 1.5rem; }

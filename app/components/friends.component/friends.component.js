@@ -8,14 +8,15 @@
     }
 
 
-    friendsCtrl.$inject = [ '$location', 'usersJson', '$scope'];
+    friendsCtrl.$inject = [ '$location', 'users', '$scope'];
 
-    function  friendsCtrl($location,usersJson, $scope) {
+    function  friendsCtrl($location,users, $scope) {
 
-        var users = this;
+        var self = this;
 
-        users.apiData = usersJson.query();
-        console.log(users)
+
+        self.friends = users.query()
+        console.log(self.friends)
 
         $('#modal2').modal().modal();
 
