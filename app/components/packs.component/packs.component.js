@@ -19,7 +19,6 @@
         vm.apiData = null;
 
         vm.$onInit = onInit;
-        //vm.otherFun = function(){}
 
         function onInit() {
 
