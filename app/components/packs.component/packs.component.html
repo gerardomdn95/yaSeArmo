@@ -18,15 +18,33 @@
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Saca el pack y la categoría<i class="material-icons right">close</i></span>
                 <p>Servicios disponibles:</p><br>
-                <p>{{pack.productos.nombre}}</p>
+                <p>{{pack.productos[0].nombre}}</p>
+                <img src="{{pack.productos[0].imagen}}" id="packImg">
+                <p>{{pack.productos[0].descripcion}}</p>
+                <p>{{pack.productos[1].nombre}}</p>
                 <img src="{{pack.productos[1].imagen}}" id="packImg">
                 <p>{{pack.productos[1].descripcion}}</p>
+                <p>{{pack.productos[2].nombre}}</p>
+                <img src="{{pack.productos[2].imagen}}" id="packImg">
+                <p>{{pack.productos[2].descripcion}}</p>
+                <p>{{pack.productos[3].nombre}}</p>
+                <img src="{{pack.productos[3].imagen}}" id="packImg">
+                <p>{{pack.productos[3].descripcion}}</p>
+                <p>{{pack.productos[4].nombre}}</p>
+                <img src="{{pack.productos[4].imagen}}" id="packImg">
+                <p>{{pack.productos[4].descripcion}}</p>
 
 
+<<<<<<< HEAD
                 <div ng-repeat="user in $ctrl.apiData">
                     <p>{{user.name}}</p>
                 </div>
-                <a href="/yalogin" class="waves-effect waves-light btn right purple darken-3">Ármala</a>
+=======
+
+
+
+>>>>>>> 95a67d31e4aa0ae147156683296015d93be7f844
+                <a href="#!/yalogin" class="waves-effect waves-light btn right purple darken-3">Ármala</a>
             </div>
         </div>
     </section>

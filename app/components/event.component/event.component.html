@@ -1,4 +1,4 @@
-<p>{{$ctrl.apiData[1].nombre}}</p>
+
 <div class="row row-event">
   <div class="row">
     <div class="col m6 l6 offset-l6"><img class="responsive-img" src="./assets/img/eventosLetras.png" alt=""></div>
@@ -6,13 +6,12 @@
   <div class="col m6 l4">
     <div class="card" style="background: -webkit-linear-gradient(left, #5d006a, #22007f)">
       <div class="card-image">
-        <img src="{{$ctrl.packs[4].nombre}}" class="responsive-img circle">
+        <img src="https://mifiestapr.files.wordpress.com/2014/06/cropped-cropped-navidad-fiesta.png" class="responsive-img circle">
         <a class="btn-floating halfway-fab waves-effect waves-lighten-5"><i class="material-icons">add</i></a>
       </div>
       <div class="card-content">
-        <span class="card-title event-titulo" style="color: #ffffff">{{$ctrl.apiData[1].nombre}}</span>
-        <p style="color:#ffffff">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little
-          markup to use effectively.</p>
+        <span class="card-title event-titulo" style="color: #ffffff">{{$ctrl.apiData[3].nombre}}</span>
+        <p style="color:#ffffff">{{$ctrl.apiData[3].ubicacion}}</p>
       </div>
     </div>
   </div>
@@ -25,8 +24,26 @@
     </div>
     <div class="divider"></div>
     <div class="section">
-      <div class="chip" ng-repeat="user in $ctrl.apiData">
-        <img src="./assets/img/person01.png" alt="Contact Person"> {{user.name}}
+      <div class="chip">
+        <img src="./assets/img/mora.jpg" alt="Contact Person"> Mora JS
+      </div>
+      <div class="chip">
+        <img src="./assets/img/mau.jpg" alt="Contact Person"> Mau Saavedra
+      </div>
+      <div class="chip">
+        <img src="./assets/img/nelly.jpg" alt="Contact Person"> Nelly Desu
+      </div>
+      <div class="chip">
+        <img src="./assets/img/gera.jpg" alt="Contact Person"> Gera Medina
+      </div>
+      <div class="chip">
+        <img src="./assets/img/mora.jpg" alt="Contact Person"> Diego Barriga
+      </div>
+      <div class="chip">
+        <img src="./assets/img/yair.jpg" alt="Contact Person"> Yair
+      </div>
+      <div class="chip">
+        <img src="./assets/img/dani.jpg" alt="Contact Person"> Alessandro Aguilar
       </div>
     </div>
   </div>
@@ -147,8 +164,6 @@
         </div>
       </div>
     </div>
-
-
 
   </div>
 </div>
