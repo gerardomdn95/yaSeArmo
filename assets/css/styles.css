@@ -17,6 +17,11 @@ nav{
   margin-left: 20px;
 }
 
+#packImg{
+  width: 100px;
+  height: 100px;
+}
+
 #mobile-demo{
   margin-top: 10px;
 }
@@ -209,7 +214,7 @@ h2{
 }
 
 #pide{
-  min-height: 432px;
+  min-height: 402px;
   max-height: 564px;
   position: relative;
   background-size: cover;
