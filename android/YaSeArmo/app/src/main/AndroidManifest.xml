@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.masavi.yasearmo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.Login.LoginActivity"
+            android:theme="@style/AppTheme.NoTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.PerfilActivity" />
+        <activity android:name=".activities.MainMenuActivity" />
+        <activity
+            android:name=".activities.Armala.ArmalaActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Armala.ManejarArmalaActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Paquetes.PaquetesActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Eventos.ManejarEventosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Pedidos.ManejarPedidosActivity" />
+        <activity
+            android:name=".activities.Login.CrearCuentaActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Eventos.EventosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Pedidos.PedidosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Productos.ProductosActivity" />
+        <activity
+            android:name=".activities.Productos.DetalleProductoActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Eventos.DetalleEventosActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".activities.Carrito.CarritoActivity"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Armala.ConsultarInvitacionesActivity"
+                  android:theme="@style/AppTheme.NoTitle" />
+        <activity android:name=".activities.Armala.ConsultarHistorialActivity"
+                  android:theme="@style/AppTheme.NoTitle" ></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.masavi.yasearmo.activities.MainMenuActivity">
+
+    <ImageView
+        android:background="@drawable/backrepeat"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Información del Perfil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:src="@drawable/profilepic"
+                android:id="@+id/btn_main_menu_perfil"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_main_menu_username"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:text="¡Bienvenido Mauricio Saavedra!"/>
+
+
+        </LinearLayout>
+
+        <!-- Piezas de Rompecabezas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <!-- Primera Columna: Botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <!-- Eventos -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:src="@drawable/eventos_txt"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="25dp" />
+
+                        <ImageView
+                            android:id="@+id/btn_eventos"
+                            android:src="@drawable/pastel"
+                            android:layout_gravity="center"
+                            android:layout_width="154dp"
+                            android:layout_height="140dp"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Paquetes -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/btn_paquetes"
+                            android:src="@drawable/pizza"
+                            android:layout_gravity="center"
+                            android:layout_width="135dp"
+                            android:layout_height="128dp"
+                            android:layout_marginLeft="9dp"
+                            android:clickable="true"
+                            />
+
+                        <ImageView
+                            android:src="@drawable/paquetes_txt"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="25dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Segunda Columna: Más Botones -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <!-- Servicios -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:src="@drawable/pedidos_txt"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="25dp" />
+
+                        <ImageView
+                            android:id="@+id/btn_pedidos"
+                            android:src="@drawable/cheve"
+                            android:layout_gravity="center"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="0dp"
+                            android:clickable="true"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"></View>
+
+                </LinearLayout>
+
+                <!-- Ármala -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:id="@+id/btn_armala"
+                            android:src="@drawable/globo"
+                            android:layout_gravity="center"
+                            android:layout_width="150dp"
+                            android:layout_height="118dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:clickable="true"
+                            />
+
+                        <ImageView
+                            android:src="@drawable/armala_txt"
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="25dp"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"></View>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">¡Ya Se Armó!</string>
+    <string name="text_dummy">Lorem ipsum adadkdkzjhdzkjdhzkdjhzkdjhzdkjzhdkzjhdkzjdhzkjdhzkdjzhdkjzhdkjzhdkj</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation.
+    </string>
+    <string name="eventos_title">¡Arma un evento con el paquete indicado!</string>
+    <string name="armala_descripcion">Amigos, están cordialmente invitados al evento más esperado del verano...
+¡la desgraduación! con motivo de nuestra finalización del batch14. Espero que todos puedan asistir :^) </string>
+</resources>
